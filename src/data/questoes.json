@@ -1,0 +1,769 @@
+{
+  "5": {
+    "numeroRodada": 5,
+    "jogadores": {
+      "jogador1": {
+        "nome": "Nome do jogador 1",
+        "pontos": 0,
+        "id": "jogador1"
+      },
+      "jogador2": {
+        "nome": "Nome do jogador 2",
+        "pontos": 0,
+        "id": "jogador2"
+      }
+    },
+    "perguntas": {
+      "jogador1": {
+        "1":{
+          "enunciado":"TEXTO QUESTÃO 1",
+          "valor": 100,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        },
+        "2":{
+          "enunciado":"TEXTO QUESTÃO 2",
+          "valor": 200,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        },
+        "3":{
+          "enunciado":"TEXTO QUESTÃO 3",
+          "valor": 300,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        },
+        "4":{
+          "enunciado":"TEXTO QUESTÃO 4",
+          "valor": 500,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        },
+        "5":{
+          "enunciado":"TEXTO QUESTÃO 5",
+          "valor": 1000,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        },
+        "6":{
+          "enunciado":"TEXTO QUESTÃO 6",
+          "valor": 2000,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        },
+        "7":{
+          "enunciado":"TEXTO QUESTÃO 7",
+          "valor": 4000,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        },
+        "8":{
+          "enunciado":"TEXTO QUESTÃO 8",
+          "valor": 8000,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        },
+        "9":{
+          "enunciado":"TEXTO QUESTÃO 9",
+          "valor": 16000,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        },
+        "10":{
+          "enunciado":"TEXTO QUESTÃO 10",
+          "valor": 32000,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        },
+        "11":{
+          "enunciado":"TEXTO QUESTÃO 11",
+          "valor": 64000,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        },
+        "12":{
+          "enunciado":"TEXTO QUESTÃO 12",
+          "valor": 125000,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        },
+        "13":{
+          "enunciado":"TEXTO QUESTÃO 13",
+          "valor": 250000,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        },
+        "14":{
+          "enunciado":"TEXTO QUESTÃO 14",
+          "valor": 500000,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        },
+        "15":{
+          "enunciado":"TEXTO QUESTÃO 15",
+          "valor": 1000000,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        }
+      },
+      "jogador2": {
+        "1":{
+          "enunciado":"TEXTO QUESTÃO 1",
+          "valor": 100,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        },
+        "2":{
+          "enunciado":"TEXTO QUESTÃO 2",
+          "valor": 200,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        },
+        "3":{
+          "enunciado":"TEXTO QUESTÃO 3",
+          "valor": 300,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        },
+        "4":{
+          "enunciado":"TEXTO QUESTÃO 4",
+          "valor": 500,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        },
+        "5":{
+          "enunciado":"TEXTO QUESTÃO 5",
+          "valor": 1000,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        },
+        "6":{
+          "enunciado":"TEXTO QUESTÃO 6",
+          "valor": 2000,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        },
+        "7":{
+          "enunciado":"TEXTO QUESTÃO 7",
+          "valor": 4000,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        },
+        "8":{
+          "enunciado":"TEXTO QUESTÃO 8",
+          "valor": 8000,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        },
+        "9":{
+          "enunciado":"TEXTO QUESTÃO 9",
+          "valor": 16000,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        },
+        "10":{
+          "enunciado":"TEXTO QUESTÃO 10",
+          "valor": 32000,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        },
+        "11":{
+          "enunciado":"TEXTO QUESTÃO 11",
+          "valor": 64000,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        },
+        "12":{
+          "enunciado":"TEXTO QUESTÃO 12",
+          "valor": 125000,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        },
+        "13":{
+          "enunciado":"TEXTO QUESTÃO 13",
+          "valor": 250000,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        },
+        "14":{
+          "enunciado":"TEXTO QUESTÃO 14",
+          "valor": 500000,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        },
+        "15":{
+          "enunciado":"TEXTO QUESTÃO 15",
+          "valor": 1000000,
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        }
+      }
+    },
+    "musicas": {
+      "1": {
+        "valor": 1000,
+        "nomeMusica": "Nome da Música",
+        "url": "link da música"
+      },
+      "2": {
+        "valor": 1000,
+        "nomeMusica": "Nome da Música",
+        "url": "link da música"
+      },
+      "3": {
+        "valor": 1000,
+        "nomeMusica": "Nome da Música",
+        "url": "link da música"
+      },
+      "4": {
+        "valor": 1000,
+        "nomeMusica": "Nome da Música",
+        "url": "link da música"
+      },
+      "5": {
+        "valor": 1000,
+        "nomeMusica": "Nome da Música",
+        "url": "link da música"
+      },
+      "6": {
+        "valor": 1000,
+        "nomeMusica": "Nome da Música",
+        "url": "link da música"
+      },
+      "7": {
+        "valor": 1000,
+        "nomeMusica": "Nome da Música",
+        "url": "link da música"
+      },
+      "8": {
+        "valor": 1000,
+        "nomeMusica": "Nome da Música",
+        "url": "link da música"
+      },
+      "9": {
+        "valor": 1000,
+        "nomeMusica": "Nome da Música",
+        "url": "link da música"
+      },
+      "10": {
+        "valor": 1000,
+        "nomeMusica": "Nome da Música",
+        "url": "link da música"
+      },
+      "11": {
+        "valor": 1000,
+        "nomeMusica": "Nome da Música",
+        "url": "link da música"
+      },
+      "12": {
+        "valor": 1000,
+        "nomeMusica": "Nome da Música",
+        "url": "link da música"
+      }
+    },
+    "frases": {
+      "jogador1": {
+        "1": {
+          "valor": 1000
+        },
+        "2": {
+          "valor": 1000
+        },
+        "3": {
+          "valor": 1000
+        }
+      },
+      "jogador2": {
+        "1": {
+          "valor": 1000
+        },
+        "2": {
+          "valor": 1000
+        },
+        "3": {
+          "valor": 1000
+        }
+      }
+    }
+  }
+}

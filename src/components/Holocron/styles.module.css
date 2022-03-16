@@ -1,0 +1,79 @@
+.holocron, .holocron * {
+  transition: all 0.3s;
+}
+
+.holocron {
+  --tamanhoFace: 10rem;
+  --corFace: radial-gradient(rgba(119, 170, 221, 0.5), rgba(51, 102, 153, 0.85) 90%);
+  --corBorda: #b7b734;
+
+  position: relative;
+  font-size: var(--tamanhoFace);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  animation: giroHorizontalInclinado 5s linear infinite;
+}
+
+.luzInterior {
+  --tamanhoLuz: 1rem;
+
+  width: var(--tamanhoLuz);
+  height: var(--tamanhoLuz);
+  background: white;
+  border: 2px solid white;
+  border-radius: 50% !important;
+  box-shadow:
+    0 0 30px 20px #fff,  /* inner white */
+    0 0 60px 40px rgba(119, 170, 221, 1), /* middle color */
+    0 0 100px 70px rgba(119, 170, 221, 1); /* outer color */
+
+  animation: giroHorizontalInclinado 5s linear reverse infinite;
+}
+
+.frente {
+  transform: rotateY(0deg) translateZ(calc(var(--tamanhoFace) * 0.5));
+}
+
+.tras {
+  transform: rotateY(180deg) translateZ(calc(var(--tamanhoFace) * 0.5));
+}
+
+.direita {
+  transform: rotateY(90deg) translateZ(calc(var(--tamanhoFace) * 0.5));
+}
+
+.esquerda {
+  transform: rotateY(-90deg) translateZ(calc(var(--tamanhoFace) * 0.5));
+}
+
+.cima {
+  transform: rotateX(90deg) translateZ(calc(var(--tamanhoFace) * 0.5));
+}
+
+.baixo {
+  transform: rotateX(-90deg) translateZ(calc(var(--tamanhoFace) * 0.5));
+}
+
+@keyframes giroHorizontalInclinado {
+  0% {
+    transform: rotateY(0deg) rotateZ(15deg);
+  }
+  50% {
+    transform: rotateY(180deg) rotateZ(15deg);
+  }
+  100% {
+    transform: rotateY(360deg) rotateZ(15deg);
+  }
+}
+
+@keyframes giroHorizontal {
+  0% {
+    transform: rotateY(0deg);
+  }
+
+  100%{
+    transform: rotateY(360deg);
+  }
+}

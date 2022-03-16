@@ -1,11 +1,20 @@
 import React from 'react';
 import './App.css';
 
+import Routes from "./pages/routes.jsx";
+
+import Menu from "./components/Menu";
+import Holocron from "./components/Holocron/";
+
 function App() {
   return (
-    <main>
-      React⚛️ + Vite⚡ + Replit🌀
-    </main>
+    <div className="corpoSite">
+      <main>
+        <Routes/>
+      </main>
+
+      <Menu/>
+    </div>
   );
 }
 

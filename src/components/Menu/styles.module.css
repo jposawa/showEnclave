@@ -1,0 +1,11 @@
+.menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.menu>a{
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
