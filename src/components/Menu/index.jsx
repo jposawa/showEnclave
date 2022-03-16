@@ -11,6 +11,14 @@ export default function Menu() {
         <HomeOutlined />
         Início
       </Link>
+      <Link to="/jogo">
+        <HomeOutlined />
+        Jogo
+      </Link>
+      <Link to="/jogadores">
+        <HomeOutlined />
+        Jogadores
+      </Link>
     </nav>
   )
 }
