@@ -10,6 +10,10 @@
   transform: rotate(45deg);
 }
 
+.desenhoCentral, .desenhoCentral * {
+  border-color: var(--corBorda, var(--corBordaHolocron));
+}
+
 .quadradoExternoInclinado {
   position: absolute;
   width: var(--tamanhoDesenhoCentral);

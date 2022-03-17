@@ -5,7 +5,7 @@
 .holocron {
   --tamanhoFace: 10rem;
   --corFace: radial-gradient(rgba(119, 170, 221, 0.5), rgba(51, 102, 153, 0.85) 90%);
-  --corBorda: #b7b734;
+  --corBorda: var(--corBordaHolocron, #b7b734);
 
   position: relative;
   font-size: var(--tamanhoFace);
