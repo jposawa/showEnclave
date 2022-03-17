@@ -5,7 +5,27 @@
 }
 
 .menu>a{
+  --tamanhoItem: 3.5rem;
+
+  width: var(--tamanhoItem);
+  height: var(--tamanhoItem);
+  font-size: 1.2rem;
   text-decoration: none;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+}
+
+
+@media screen and (min-width:1200px) {
+  .menu {
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .menu>a:first-child {
+    order: 3;
+  }
 }

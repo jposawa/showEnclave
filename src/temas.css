@@ -14,4 +14,7 @@
   --corComplementarMaisEscura: rgb(148,101,0);
   --corComplementarClara: rgb(255,178,17);
   --corComplementarMaisClara: rgb(255,196,70);
+
+  --corFundoPrincipal: rgb(23,33,45);
+  --corTextoPrincipal: rgb(230,230,230);
 }

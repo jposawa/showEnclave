@@ -6,6 +6,8 @@
   left: 0;
   display: flex;
   flex-direction: column;
+  background: radial-gradient(rgba(23,33,60,0.82), rgba(23,33,60,1));
+  color: var(--corTextoPrincipal);
 }
 
 .corpoSite>main {
@@ -18,4 +20,20 @@
   border: 1px solid blue;
   width: 100%;
   order: 2;
+}
+
+@media screen and (min-width:1200px) {
+  .corpoSite {
+    flex-direction: row;
+  }
+  
+  .corpoSite>main {
+    order: 2;
+  }
+  
+  .corpoSite>nav {
+    width: auto;
+    height: 100%;
+    order: 1;
+  }
 }
