@@ -24,7 +24,8 @@
 .selecionado {
   border-bottom-width: var(--tamanhoBordaSelecionado) !important;
 /*   font-weight: bold; */
-  color: var(--corSecundariaMaisClara) !important;
+  color: #fff !important;
+  text-shadow: 0 0 0.2rem #fff;
 }
 
 .menu>a{
@@ -42,7 +43,7 @@
   align-items: center;
   color: inherit;
   z-index: 2;
-  transition: box-shadow 0.3s, border 0.2s;
+  transition: box-shadow 0.3s, border 0.2s, text-shadow 0.3s;
 }
 
 .menu>a:hover {

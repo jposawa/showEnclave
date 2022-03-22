@@ -15,17 +15,17 @@ export default function Menu() {
   return (
     <nav className={styles.menu}>
       <span className={styles.fundo}/>
-      <Link to="/placar" className={isThisLocation("placar") && styles.selecionado}>
+      <Link to="/placar" className={isThisLocation("placar") ? styles.selecionado : undefined}>
         <ProjectOutlined style={{transform: "rotate(180deg)"}} />
         <p>Placar</p>
       </Link>
       
-      <Link to="/inicio" className={(isThisLocation("inicio") || isThisLocation("")) && styles.selecionado}>
+      <Link to="/inicio" className={(isThisLocation("inicio") || isThisLocation("")) ? styles.selecionado : undefined}>
         <HomeOutlined />
         <p>Início</p>
       </Link>
       
-      <Link to="/jogo" className={isThisLocation("jogo") && styles.selecionado}>
+      <Link to="/jogo" className={isThisLocation("jogo") ? styles.selecionado : undefined}>
         <AppstoreOutlined />
         <p>Jogo</p>
       </Link>
