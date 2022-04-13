@@ -1,0 +1,151 @@
+{
+  "config": {
+    "rodadaAtual": 5,
+    "pontos": {
+      "pergunta": {
+        "proporcaoPerda": 0.5,
+        "facil": 250,
+        "medio": 500,
+        "dificil": 1000,
+        "final": 5000
+      },
+      "musica": {
+        "proporcaoPerda": 0.5,
+        "padrao": 2000
+      }
+    }
+  },
+  "5": {
+    "numeroRodada": 5,
+    "jogadores": {
+      "jogador1": {
+        "nome": "Nome do jogador 1",
+        "pontos": 0,
+        "id": "jogador1"
+      },
+      "jogador2": {
+        "nome": "Nome do jogador 2",
+        "pontos": 0,
+        "id": "jogador2"
+      }
+    },
+    "perguntas": {
+      "jogador1": {
+        "1":{
+          "enunciado": "TEXTO QUESTÃO 1",
+          "dificuldade": "facil",
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": false
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": true
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        }
+      },
+      "jogador2": {
+        "1":{
+          "enunciado": "TEXTO QUESTÃO 1",
+          "dificuldade": "facil",
+          "opcoes": {
+            "a": {
+              "texto": "TEXTO ALTERNATIVA A",
+              "correta": true
+            },
+            "b": {
+              "texto": "TEXTO ALTERNATIVA B",
+              "correta": false
+            },
+            "c": {
+              "texto": "TEXTO ALTERNATIVA C",
+              "correta": false
+            },
+            "d": {
+              "texto": "TEXTO ALTERNATIVA D",
+              "correta": false
+            }
+          }
+        }
+      }
+    },
+    "musicas": {
+      "1": {
+        "nomeMusica": "Nome da Música",
+        "url": "link da música"
+      },
+      "2": {
+        "nomeMusica": "Nome da Música",
+        "url": "link da música"
+      },
+      "3": {
+        "nomeMusica": "Nome da Música",
+        "url": "link da música"
+      },
+      "4": {
+        "nomeMusica": "Nome da Música",
+        "url": "link da música"
+      },
+      "5": {
+        "nomeMusica": "Nome da Música",
+        "url": "link da música"
+      },
+      "6": {
+        "nomeMusica": "Nome da Música",
+        "url": "link da música"
+      },
+      "7": {
+        "nomeMusica": "Nome da Música",
+        "url": "link da música"
+      },
+      "8": {
+        "nomeMusica": "Nome da Música",
+        "url": "link da música"
+      },
+      "9": {
+        "nomeMusica": "Nome da Música",
+        "url": "link da música"
+      },
+      "10": {
+        "nomeMusica": "Nome da Música",
+        "url": "link da música"
+      },
+      "11": {
+        "nomeMusica": "Nome da Música",
+        "url": "link da música"
+      },
+      "12": {
+        "nomeMusica": "Nome da Música",
+        "url": "link da música"
+      }
+    },
+    "frases": {
+      "jogador1": {
+        "1": {
+        },
+        "2": {
+        },
+        "3": {
+        }
+      },
+      "jogador2": {
+        "1": {
+        },
+        "2": {
+        },
+        "3": {
+        }
+      }
+    }
+  }
+}
