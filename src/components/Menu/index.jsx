@@ -6,7 +6,6 @@ import styles from "./styles.module.css";
 
 export default function Menu() {
   const location = useLocation();
-  console.log(location);
 
   const isThisLocation = (nomePagina) => {
     return location.pathname === `/${nomePagina}`;

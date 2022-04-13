@@ -1,3 +1,7 @@
+button {
+  cursor: pointer;
+}
+
 .corpoSite {
   position: absolute;
   width: 100%;
@@ -38,4 +42,9 @@
     height: 100%;
     order: 1;
   }
+}
+
+.oculto {
+  visibility: hidden !important;
+  opacity: 0 !important;
 }
