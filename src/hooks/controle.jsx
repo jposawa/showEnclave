@@ -73,6 +73,14 @@ export const ControleProvider = ({children}) => {
   const [jogoIniciado, setJogoIniciado] = React.useState(false);
   const navigate = useNavigate();
 
+  const formataTextoPontos = (pontos) => {
+    if(pontos === 1) {
+      return `${pontos} ponto`;
+    }
+
+    return `${pontos} pontos`;
+  }
+
   const recuperarPlacarLS = () =>{
     const {PREFIXO_LS} = CONFIG;
     const _placar = localStorage.getItem(`${PREFIXO_LS}placar`);
@@ -254,6 +262,16 @@ export const ControleProvider = ({children}) => {
     navigate("/jogo");
   }
 
+  const ajustaNomeDificuldade = (dificuldade) => {
+    const dificuldades = {
+      facil: "fácil",
+      medio: "médio",
+      dificil: "difícil",
+    }
+
+    return dificuldades[dificuldade];
+  }
+
 
   //Executa logo que os elementos do DOM são carregados, fazendo a configuração inicial
   useEffect(()=>{
@@ -276,6 +294,8 @@ export const ControleProvider = ({children}) => {
     setJogoIniciado,
     atualizaJogadores,
     iniciaJogo,
+    formataTextoPontos,
+    ajustaNomeDificuldade
   };
 
   return (

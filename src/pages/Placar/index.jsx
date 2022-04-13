@@ -4,16 +4,10 @@ import { useControle } from "../../hooks/controle.jsx";
 import styles from "./styles.module.css";
 
 export default function Placar() {
-  const { dadosJogo } = useControle();
+  const { dadosJogo, formataTextoPontos } = useControle();
   const vencendo = dadosJogo?.jogadores?.jogador1?.pontos > dadosJogo?.jogadores?.jogador2?.pontos ? "jogador1" : dadosJogo?.jogadores?.jogador1?.pontos < dadosJogo?.jogadores?.jogador2?.pontos ? "jogador2" : "";
   // <Carta altura="40vmin" virada viraClique positiva valor="2"/>
-  const formataTextoPontos = (pontos) => {
-    if(pontos === 1) {
-      return `${pontos} ponto`;
-    }
-
-    return `${pontos} pontos`;
-  }
+  
   return (
     <div className={styles.placar}>
       <h1>Placar</h1>
