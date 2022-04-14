@@ -3,6 +3,7 @@ import React from "react";
 export const useMusica = (url) => {
   const [audio, setAudio] = React.useState(new Audio());
   const [tocando, setTocando] = React.useState(false);
+  const [carregou, setCarregou] = React.useState(false);
 
   const alterna = () => {setTocando(!tocando)};
   const para = () => {
@@ -15,10 +16,18 @@ export const useMusica = (url) => {
       return null;
     }
     
-    const pedacos = urlCompartilhada?.split("/d/");
-    const [idMusica] = pedacos[1]?.split("/");
+    try {
+      const pedacos = urlCompartilhada?.split("/d/");
+      const [idMusica] = pedacos[1]?.split("/");
+  
+      return idMusica;
+    }
+    catch(error) {
+      console.error("Deu ruim na URL da música");
+      console.log(error);
 
-    return idMusica;
+      return false;
+    }
   }
 
   const geraUrlUtilizavel = (url) => {
@@ -28,7 +37,10 @@ export const useMusica = (url) => {
   }
 
   React.useMemo(() => {
-    setAudio(new Audio(geraUrlUtilizavel(url)));
+    const urlUtilizavel = geraUrlUtilizavel(url);
+
+    setAudio(new Audio(urlUtilizavel));
+    setCarregou(!!urlUtilizavel);
   }, [url]);
 
   React.useMemo(() => {
@@ -47,5 +59,6 @@ export const useMusica = (url) => {
     tocando,
     alterna,
     para,
+    carregou,
   };
 }

@@ -9,31 +9,23 @@ export default function Musicas() {
   const { 
     configJogo, 
     dadosJogo,
-    setDadosJogo,
-    copiaDadosJogo,
-    formataTextoPontos, 
-    ajustaNomeDificuldade, 
-    verificaRespostaPontos,
-    mostraProximo,
-    setMostraProximo,
-    proximaFase,
+    copiaDadosJogo, 
     setMostraModal,
     mostraModal,
-    proximaEtapa,
     atualizaPontos,
   } = useControle();
   const { jogadorAtual, faseAtual } = dadosJogo?.andamento;
   const perguntaAtual = dadosJogo?.perguntas[jogadorAtual][faseAtual];
   const [resposta, setResposta] = React.useState();
   const [musicaAtiva, setMusicaAtiva] = React.useState();
-  const {tocando, alterna, para} = useMusica(musicaAtiva?.url);
+  const {tocando, alterna, para, carregou} = useMusica(musicaAtiva?.url);
 
   const ativaMusica = (musica) => {
     setMusicaAtiva(musica);
     setMostraModal(!!musica);
   }
 
-  const aplicaResultado = (acertou) => {
+  const respondeMusica = (acertou) => {
     const _musicaAtiva = {...musicaAtiva};
     const _dadosJogo = copiaDadosJogo();
     let modPonto = configJogo?.pontos.musicas.padrao;
@@ -45,6 +37,7 @@ export default function Musicas() {
       modPonto *= configJogo?.pontos.musicas.proporcaoPerda;
     }
 
+    setMostraModal(false);
     atualizaPontos(modPonto, _dadosJogo);
   }
 
@@ -74,17 +67,22 @@ export default function Musicas() {
 
       <Modal>
         <h2>Música {musicaAtiva?.numero}</h2>
-        <div className={styles.player}>
-          <Botao secundaria onClick={para}>&#9632;</Botao>
-          <Botao onClick={alterna}>
-            {!tocando ? <CaretRightOutlined/> : <PauseOutlined />}
-          </Botao>
-        </div>
-        <br/>
-        <div className={styles.slotBotoesModal}>
-          <Botao complementar onClick={() => {escolhaPerguntaFinal()}}>Errou</Botao>
-          <Botao confirma onClick={() => {escolhaPerguntaFinal(true)}}>Acertou</Botao>
-        </div>
+        {!carregou ? <>
+          <br/>
+          <h3>Nenhuma música carregada</h3>
+        </> : <>
+          <div className={styles.player}>
+            <Botao secundaria onClick={para}>&#9632;</Botao>
+            <Botao onClick={alterna}>
+              {!tocando ? <CaretRightOutlined/> : <PauseOutlined />}
+            </Botao>
+          </div>
+          <br/>
+          <div className={styles.slotBotoesModal}>
+            <Botao complementar onClick={() => {respondeMusica()}}>Errou</Botao>
+            <Botao confirma onClick={() => {respondeMusica(true)}}>Acertou</Botao>
+          </div>
+        </>}
       </Modal>
     </div>
   )
