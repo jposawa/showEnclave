@@ -71,3 +71,9 @@
 .btnConfirma {
   --corBotao: var(--corTerciaria);
 }
+
+.slotBotoesModal {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}

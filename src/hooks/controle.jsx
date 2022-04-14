@@ -73,6 +73,7 @@ export const ControleProvider = ({children}) => {
   const [jogoIniciado, setJogoIniciado] = React.useState(false);
   const navigate = useNavigate();
   const [mostraProximo, setMostraProximo] = React.useState(false);
+  const [mostraModal, setMostraModal] = React.useState(false);
 
   const formataTextoPontos = (pontos) => {
     if(pontos === 1) {
@@ -323,26 +324,44 @@ export const ControleProvider = ({children}) => {
 
   const proximaEtapa = (_dadosJogo) => {
     _dadosJogo = _dadosJogo ? _dadosJogo : copiaDadosJogo();
+    const { sequencia, etapaAtual } = _dadosJogo?.andamento;
+    const { jogador1, jogador2 } = _dadosJogo?.jogadores;
+
+    if(etapaAtual === "perguntas") {
+      _dadosJogo.andamento.etapaAtual = "musicas";
+      _dadosJogo.andamento.jogadorAtual = jogador1.pontos > jogador2.pontos ? jogador2.id : jogador1.pontos < jogador2.pontos ? jogador1.id : sequencia[0];
+    }
+    else {
+      _dadosJogo.finalizando = true;
+    }
+
+    setDadosJogo(_dadosJogo);
   }
 
   const proximaFase = () => {
     const _dadosJogo = copiaDadosJogo();
     const { jogadorAtual, faseAtual, sequencia, etapaAtual } = _dadosJogo?.andamento;
-    const {jogador1, jogador2} = _dadosJogo?.jogadores;
     let proxFase = faseAtual + 1;
 
-    if(proxFase > configJogo.fluxo[etapaAtual].totalFases) {
+    if(proxFase > configJogo.fluxo[etapaAtual].totalFases || !_dadosJogo.perguntas[jogadorAtual][proxFase]) {
+      _dadosJogo.andamento.faseAtual = 1;
+      
       if(jogadorAtual === sequencia[0]) {
         _dadosJogo.andamento.jogadorAtual = sequencia[1];
-      }
-      else if(etapaAtual === "perguntas") {
-        _dadosJogo.andamento.etapaAtual = "musicas";
-        _dadosJogo.andamento.jogadorAtual = jogador1.pontos > jogador2.pontos ? jogador2.id : jogador1.pontos < jogador2.pontos ? jogador1.id : sequencia[0];
+
+        setDadosJogo(_dadosJogo);
       }
       else {
-        _dadosJogo.finalizando = true;
+        proximaEtapa(_dadosJogo);
       }
     }
+    else {
+      _dadosJogo.andamento.faseAtual = proxFase;
+
+      setDadosJogo(_dadosJogo);
+    }
+    
+    setMostraProximo(false);
   }
 
   //Executa logo que os elementos do DOM são carregados, fazendo a configuração inicial
@@ -377,6 +396,10 @@ export const ControleProvider = ({children}) => {
     verificaRespostaPontos,
     mostraProximo,
     setMostraProximo,
+    proximaFase,
+    proximaEtapa,
+    mostraModal,
+    setMostraModal,
   };
 
   return (

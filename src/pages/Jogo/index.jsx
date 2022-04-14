@@ -1,6 +1,7 @@
 import React from "react";
 import { useControle } from "../../hooks/controle.jsx";
 import Perguntas from "./Perguntas";
+import Musicas from "./Musicas";
 
 import styles from "./styles.module.css";
 
@@ -20,7 +21,8 @@ export default function Jogo() {
         <section className={styles.slotEtapa}>
         {
           {
-            "perguntas": <Perguntas/>
+            "perguntas": <Perguntas/>,
+            "musicas": <Musicas/>
           }[dadosJogo?.andamento?.etapaAtual]
         }
         </section>
