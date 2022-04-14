@@ -1,5 +1,5 @@
 import React from "react";
-import { useControle } from "../../../hooks/controle.jsx";
+import { useControle, useMusica } from "../../../hooks";
 import {Botao, Modal} from "../../../components";
 
 import styles from "./styles.module.css";
@@ -17,6 +17,7 @@ export default function Musicas() {
     setMostraProximo,
     proximaFase,
     setMostraModal,
+    mostraModal,
     proximaEtapa,
     atualizaPontos,
   } = useControle();
@@ -24,6 +25,7 @@ export default function Musicas() {
   const perguntaAtual = dadosJogo?.perguntas[jogadorAtual][faseAtual];
   const [resposta, setResposta] = React.useState();
   const [musicaAtiva, setMusicaAtiva] = React.useState();
+  const {tocando, alterna, para} = useMusica(musicaAtiva?.url);
 
   const ativaMusica = (musica) => {
     setMusicaAtiva(musica);
@@ -45,34 +47,40 @@ export default function Musicas() {
     atualizaPontos(modPonto, _dadosJogo);
   }
 
+  React.useMemo(() => {
+    if(!mostraModal && musicaAtiva && tocando) {
+      alterna();
+    }
+  }, [mostraModal]);
+
   return(
     <div className={styles.musicas}>
       {dadosJogo && (
       <>
         {Object.entries(dadosJogo?.musicas).map(([numero, musica]) => (
-          <>
-            {musica && 
-              <Botao
-                key={numero}
-                name={numero}
-                onClick={() => {ativaMusica({...musica, numero: numero})}}
-                disabled={musica?.tocada}
-              >
-                Música {numero}
-              </Botao>
-            }
-          </>
+          musica && 
+            <Botao
+              key={numero}
+              name={numero}
+              onClick={() => {ativaMusica({...musica, numero: numero})}}
+              disabled={musica?.tocada}
+            >
+              Música {numero}
+            </Botao>
         ))}
       </>
     )}
 
       <Modal>
         <h2>Música {musicaAtiva?.numero}</h2>
-        <p><button>Play/Stop</button></p>
+        <div className={styles.player}>
+          <button onClick={alterna}>Play/Pause</button>
+          <button onClick={para}>Stop</button>
+        </div>
         <br/>
         <div className={styles.slotBotoesModal}>
-          <Botao complementar onClick={() => {escolhaPerguntaFinal()}}>Não</Botao>
-          <Botao onClick={() => {escolhaPerguntaFinal(true)}}>Sim</Botao>
+          <Botao complementar onClick={() => {escolhaPerguntaFinal()}}>Errou</Botao>
+          <Botao onClick={() => {escolhaPerguntaFinal(true)}}>Acertou</Botao>
         </div>
       </Modal>
     </div>

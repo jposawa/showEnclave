@@ -250,7 +250,7 @@ export const ControleProvider = ({children}) => {
   }
 
   const atualizaJogadores = (jogadores, atualizaSequencia, iniciarJogo) => {
-    const _dadosJogo = JSON.parse(JSON.stringify(dadosJogo));
+    const _dadosJogo = copiaDadosJogo();
     const {jogador1, jogador2, primeiro} = jogadores;
 
     _dadosJogo.jogadores.jogador1.nome = jogador1;
@@ -261,7 +261,8 @@ export const ControleProvider = ({children}) => {
       _dadosJogo.andamento.sequencia = [primeiro, idProximoJogador(primeiro)];
     }
 
-    atualizarDados("rodadas", _dadosJogo, _dadosJogo.numeroRodada);
+    // atualizarDados("rodadas", _dadosJogo, _dadosJogo.numeroRodada);
+    setDados(_dadosJogo);
 
     if(iniciarJogo) {
       iniciaJogo();

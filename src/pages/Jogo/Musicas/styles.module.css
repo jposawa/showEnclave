@@ -10,3 +10,13 @@
 .musicas>button {
   flex: 0 0 30%;
 }
+
+.slotBotoesModal {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.slotBotoesModal>button {
+  flex: 0 0 30%;
+}
