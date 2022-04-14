@@ -5,16 +5,24 @@ import {Botao} from "../../../components";
 import styles from "./styles.module.css";
 
 export default function Perguntas() {
-  const { configJogo, dadosJogo, formataTextoPontos, ajustaNomeDificuldade } = useControle();
+  const { 
+    configJogo, 
+    dadosJogo, 
+    formataTextoPontos, 
+    ajustaNomeDificuldade, 
+    verificaRespostaPontos,
+    mostraProximo,
+    setMostraProximo,
+  } = useControle();
   const { jogadorAtual, faseAtual } = dadosJogo?.andamento;
   const perguntaAtual = dadosJogo?.perguntas[jogadorAtual][faseAtual];
   const [resposta, setResposta] = React.useState();
 
   const alteraResposta = (respostaInformada) => {
-    setResposta(respostaInformada !== resposta ? respostaInformada : undefined);
+    if(!mostraProximo){
+      setResposta(respostaInformada !== resposta ? respostaInformada : undefined);
+    }
   }
-
-  const verificaResposta = () => {}
   
   return (
     <div className={styles.perguntas}>
@@ -25,7 +33,7 @@ export default function Perguntas() {
             Pergunta {faseAtual} - {ajustaNomeDificuldade(perguntaAtual?.dificuldade)}
           </h2>
           
-          <h3>[{configJogo?.pontos?.pergunta[perguntaAtual?.dificuldade]}]</h3>
+          <h3>[{configJogo?.pontos?.perguntas[perguntaAtual?.dificuldade]}]</h3>
         </header>
         
         <section className={styles.corpoPergunta}>
@@ -36,7 +44,10 @@ export default function Perguntas() {
           <div className={styles.slotAlternativas}>
             {Object.entries(perguntaAtual.opcoes).map(([letra, opcao]) => (
               <Botao
+                key={letra}
+                name={letra}
                 secundario={letra === resposta}
+                className={letra === resposta ? styles.respostaAtiva : undefined}
                 onClick={() => {alteraResposta(letra)}}
               >
                 {opcao.texto}
@@ -47,10 +58,17 @@ export default function Perguntas() {
         
         <section className={styles.slotBotoes}>
           <Botao
-            className={`${styles.btnConfirma} ${resposta ? undefined : "oculto"}`}
+            className={`${styles.btnConfirma} ${resposta && !mostraProximo ? undefined : "oculto"}`}
             largura="7rem"
+            onClick={() => {verificaRespostaPontos(resposta, styles)}}
           >
             CONFIRMAR
+          </Botao>
+          <Botao
+            className={mostraProximo ? undefined : "oculto"}
+            largura="7rem"
+          >
+            PRÓXIMA
           </Botao>
         </section>
       </>

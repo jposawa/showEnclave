@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./styles.module.css";
 
 export default function Triangulo(props) {
-  const {className, type, children, onClick, largura, secundaria, secundario, complementar} = props;
+  const {className, type, children, onClick, largura, secundaria, secundario, complementar, name} = props;
 
   const classeSecundaria = secundaria || secundario;
 
@@ -14,6 +14,7 @@ export default function Triangulo(props) {
 
   return (
     <button
+      name={name}
       className={`
         ${styles.botao} 
         ${className} 

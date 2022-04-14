@@ -2,16 +2,26 @@
   "config": {
     "rodadaAtual": 5,
     "pontos": {
-      "pergunta": {
-        "proporcaoPerda": 0.5,
+      "perguntas": {
+        "proporcaoPerda": -0.5,
         "facil": 250,
         "medio": 500,
         "dificil": 1000,
         "final": 5000
       },
-      "musica": {
-        "proporcaoPerda": 0.5,
+      "musicas": {
+        "proporcaoPerda": -0.5,
         "padrao": 2000
+      }
+    },
+    "fluxo": {
+      "perguntas": {
+        "totalFases": 16,
+        "alterna": false
+      },
+      "musicas": {
+        "totalFases": 6,
+        "alterna": true
       }
     }
   },

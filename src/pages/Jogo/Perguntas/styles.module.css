@@ -44,10 +44,30 @@
   clip-path: polygon(15% 0, 0 25%, 0 100%, 85% 100%, 100% 75%, 100% 0);
 }
 
+.alternativaCorreta, .alternativaErrada {
+  border-color: rgba(0,0,0,0);
+}
+
+.alternativaCorreta {
+  background: var(--corConfirma);
+}
+
+.alternativaErrada {
+  background: var(--corComplementar);
+}
+
 .slotBotoes {
-  height: 10%;
+  height: 12%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slotBotoes>button {
+  --altura: 2rem;
 }
 
 .btnConfirma {
-  --corBotao: #174;
+  --corBotao: var(--corTerciaria);
 }
