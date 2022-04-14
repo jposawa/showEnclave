@@ -37,3 +37,8 @@
   --corBotao: var(--corComplementarEscura);
   --corBotao2: var(--corPrimariaMaisClara);
 }
+
+.modoConfirma {
+  --corBotao: var(--corConfirma);
+  --corBotao2: var(--corPrimariaEscura);
+}

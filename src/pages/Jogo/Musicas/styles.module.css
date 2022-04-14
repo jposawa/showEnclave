@@ -11,6 +11,21 @@
   flex: 0 0 30%;
 }
 
+.player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.player>button {
+  flex: 0 0 22%;
+}
+
+.player>button>span {
+  font-size: 1.2em;
+}
+
 .slotBotoesModal {
   width: 90%;
   display: flex;

@@ -1,6 +1,7 @@
 import React from "react";
 import { useControle, useMusica } from "../../../hooks";
 import {Botao, Modal} from "../../../components";
+import {CaretRightOutlined, PauseOutlined} from "@ant-design/icons";
 
 import styles from "./styles.module.css";
 
@@ -74,13 +75,15 @@ export default function Musicas() {
       <Modal>
         <h2>Música {musicaAtiva?.numero}</h2>
         <div className={styles.player}>
-          <button onClick={alterna}>Play/Pause</button>
-          <button onClick={para}>Stop</button>
+          <Botao secundaria onClick={para}>&#9632;</Botao>
+          <Botao onClick={alterna}>
+            {!tocando ? <CaretRightOutlined/> : <PauseOutlined />}
+          </Botao>
         </div>
         <br/>
         <div className={styles.slotBotoesModal}>
           <Botao complementar onClick={() => {escolhaPerguntaFinal()}}>Errou</Botao>
-          <Botao onClick={() => {escolhaPerguntaFinal(true)}}>Acertou</Botao>
+          <Botao confirma onClick={() => {escolhaPerguntaFinal(true)}}>Acertou</Botao>
         </div>
       </Modal>
     </div>

@@ -2,7 +2,19 @@ import React from "react";
 import styles from "./styles.module.css";
 
 export default function Triangulo(props) {
-  const {className, type, children, onClick, largura, secundaria, secundario, complementar, name, disabled} = props;
+  const {
+    className, 
+    type, 
+    children, 
+    onClick, 
+    largura, 
+    secundaria, 
+    secundario, 
+    complementar, 
+    name, 
+    disabled, 
+    confirma
+  } = props;
 
   const classeSecundaria = secundaria || secundario;
 
@@ -18,7 +30,7 @@ export default function Triangulo(props) {
       className={`
         ${styles.botao} 
         ${className} 
-        ${complementar ? styles.modoComplementar : classeSecundaria ? styles.modoSecundario : undefined}
+        ${confirma ? styles.modoConfirma : complementar ? styles.modoComplementar : classeSecundaria ? styles.modoSecundario : undefined}
       `} 
       type={type} 
       onClick={handleClick}
