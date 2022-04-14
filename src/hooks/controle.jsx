@@ -386,10 +386,13 @@ export const ControleProvider = ({children}) => {
   const valoresExportados = {
     CONFIG,
     dadosJogo,
+    setDadosJogo,
+    copiaDadosJogo,
     configJogo,
     jogoIniciado,
     setJogoIniciado,
     atualizaJogadores,
+    atualizaPontos,
     iniciaJogo,
     formataTextoPontos,
     ajustaNomeDificuldade,

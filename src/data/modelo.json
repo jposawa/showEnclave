@@ -716,69 +716,63 @@
       "musicas": {
         "1": {
           "nomeMusica": "Nome da Música",
-          "url": "link da música"
+          "url": "link da música",
+          "tocada": false
         },
         "2": {
           "nomeMusica": "Nome da Música",
-          "url": "link da música"
+          "url": "link da música",
+          "tocada": false
         },
         "3": {
           "nomeMusica": "Nome da Música",
-          "url": "link da música"
+          "url": "link da música",
+          "tocada": false
         },
         "4": {
           "nomeMusica": "Nome da Música",
-          "url": "link da música"
+          "url": "link da música",
+          "tocada": false
         },
         "5": {
           "nomeMusica": "Nome da Música",
-          "url": "link da música"
+          "url": "link da música",
+          "tocada": false
         },
         "6": {
           "nomeMusica": "Nome da Música",
-          "url": "link da música"
+          "url": "link da música",
+          "tocada": false
         },
         "7": {
           "nomeMusica": "Nome da Música",
-          "url": "link da música"
+          "url": "link da música",
+          "tocada": false
         },
         "8": {
           "nomeMusica": "Nome da Música",
-          "url": "link da música"
+          "url": "link da música",
+          "tocada": false
         },
         "9": {
           "nomeMusica": "Nome da Música",
-          "url": "link da música"
+          "url": "link da música",
+          "tocada": false
         },
         "10": {
           "nomeMusica": "Nome da Música",
-          "url": "link da música"
+          "url": "link da música",
+          "tocada": false
         },
         "11": {
           "nomeMusica": "Nome da Música",
-          "url": "link da música"
+          "url": "link da música",
+          "tocada": false
         },
         "12": {
           "nomeMusica": "Nome da Música",
-          "url": "link da música"
-        }
-      },
-      "frases": {
-        "jogador1": {
-          "1": {
-          },
-          "2": {
-          },
-          "3": {
-          }
-        },
-        "jogador2": {
-          "1": {
-          },
-          "2": {
-          },
-          "3": {
-          }
+          "url": "link da música",
+          "tocada": false
         }
       }
     },
@@ -1472,69 +1466,63 @@
       "musicas": {
         "1": {
           "nomeMusica": "Nome da Música",
-          "url": "link da música"
+          "url": "link da música",
+          "tocada": false
         },
         "2": {
           "nomeMusica": "Nome da Música",
-          "url": "link da música"
+          "url": "link da música",
+          "tocada": false
         },
         "3": {
           "nomeMusica": "Nome da Música",
-          "url": "link da música"
+          "url": "link da música",
+          "tocada": false
         },
         "4": {
           "nomeMusica": "Nome da Música",
-          "url": "link da música"
+          "url": "link da música",
+          "tocada": false
         },
         "5": {
           "nomeMusica": "Nome da Música",
-          "url": "link da música"
+          "url": "link da música",
+          "tocada": false
         },
         "6": {
           "nomeMusica": "Nome da Música",
-          "url": "link da música"
+          "url": "link da música",
+          "tocada": false
         },
         "7": {
           "nomeMusica": "Nome da Música",
-          "url": "link da música"
+          "url": "link da música",
+          "tocada": false
         },
         "8": {
           "nomeMusica": "Nome da Música",
-          "url": "link da música"
+          "url": "link da música",
+          "tocada": false
         },
         "9": {
           "nomeMusica": "Nome da Música",
-          "url": "link da música"
+          "url": "link da música",
+          "tocada": false
         },
         "10": {
           "nomeMusica": "Nome da Música",
-          "url": "link da música"
+          "url": "link da música",
+          "tocada": false
         },
         "11": {
           "nomeMusica": "Nome da Música",
-          "url": "link da música"
+          "url": "link da música",
+          "tocada": false
         },
         "12": {
           "nomeMusica": "Nome da Música",
-          "url": "link da música"
-        }
-      },
-      "frases": {
-        "jogador1": {
-          "1": {
-          },
-          "2": {
-          },
-          "3": {
-          }
-        },
-        "jogador2": {
-          "1": {
-          },
-          "2": {
-          },
-          "3": {
-          }
+          "url": "link da música",
+          "tocada": false
         }
       }
     }

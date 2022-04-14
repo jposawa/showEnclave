@@ -17,6 +17,10 @@
   transition: background var(--tempoTransicao), box-shadow var(--tempoTransicao), width var(--tempoTransicao), opacity var(--tempoTransicao), visibility var(--tempoTransicao);
 }
 
+.botao:disabled {
+  opacity: 0.8;
+}
+
 .botao:hover {
 /*   box-shadow: 0 0 20rem rgba(255,255,255,0.1) inset; */
   color: #fff;

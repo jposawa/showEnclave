@@ -107,6 +107,7 @@ export default function Perguntas() {
         </section>
       </>
       )}
+      
       <Modal proibidoFechar>
         <h2>Atenção!</h2>
         <p>A próxima é sua <b>pergunta final</b>, no valor de {configJogo?.pontos?.perguntas?.final} pontos!</p>

@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./styles.module.css";
 
 export default function Triangulo(props) {
-  const {className, type, children, onClick, largura, secundaria, secundario, complementar, name} = props;
+  const {className, type, children, onClick, largura, secundaria, secundario, complementar, name, disabled} = props;
 
   const classeSecundaria = secundaria || secundario;
 
@@ -23,6 +23,7 @@ export default function Triangulo(props) {
       type={type} 
       onClick={handleClick}
       style={{"--largura":largura}}
+      disabled={disabled}
     >
       {children ? children : "Botão"}
     </button>
