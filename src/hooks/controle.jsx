@@ -1,6 +1,6 @@
 import React, {createContext, useContext, useState, useEffect} from 'react';
 import { initializeApp } from "firebase/app";
-import { getDatabase, ref, onValue, update } from "firebase/database";
+import { getDatabase, ref, onValue, update, get } from "firebase/database";
 import { useNavigate } from "react-router-dom";
 
 import questoes from "../data/questoes.json";
@@ -172,12 +172,13 @@ export const ControleProvider = ({children}) => {
   const pegaDadosJogo = () => {
     const refDadosJogo = pegarDados(`rodadas/${configJogo?.rodadaAtual}`);
 
-    onValue(refDadosJogo, (recorte) => {
+    get(refDadosJogo).then((recorte) => {
       const _dadosJogo = JSON.parse(JSON.stringify(recorte.val()));
       
       verificaRodada(_dadosJogo);
-    }, {
-      onlyOnce: true
+    }).catch((error) => {
+      console.error("Erro ao pegar dados");
+      console.log(error);
     });
   }
 
@@ -185,16 +186,15 @@ export const ControleProvider = ({children}) => {
     const _dadosJogo = copiaDadosJogo();
     const {jogador1, jogador2, primeiro} = jogadores;
 
-    _dadosJogo.jogadores.jogador1.nome = jogador1;
-    _dadosJogo.jogadores.jogador2.nome = jogador2;
+    _dadosJogo.jogadores.[primeiro].nome = jogador1;
+    _dadosJogo.jogadores.[idProximoJogador(primeiro)].nome = jogador2;
 
     if(atualizaSequencia) {
       _dadosJogo.andamento.jogadorAtual = primeiro;
       _dadosJogo.andamento.sequencia = [primeiro, idProximoJogador(primeiro)];
     }
 
-    // atualizarDados("rodadas", _dadosJogo, _dadosJogo.numeroRodada);
-    setDados(_dadosJogo);
+    setDadosJogo(_dadosJogo);
 
     if(iniciarJogo) {
       iniciaJogo();
@@ -202,7 +202,11 @@ export const ControleProvider = ({children}) => {
   }
 
   const iniciaJogo = () => {
-    setJogoIniciado(true);
+    const _dadosJogo = copiaDadosJogo();
+
+    _dadosJogo.iniciado = true;
+
+    setDadosJogo(_dadosJogo);
     navigate("/jogo");
   }
 
@@ -299,7 +303,6 @@ export const ControleProvider = ({children}) => {
 
   //Executa logo que os elementos do DOM são carregados, fazendo a configuração inicial
   useEffect(()=>{
-    atualizarPlacarLS();
     setFbApp(initializeApp(CONFIG.FB_CONFIG));
     pegaConfigJogo();
   },[]);
@@ -336,6 +339,8 @@ export const ControleProvider = ({children}) => {
     proximaEtapa,
     mostraModal,
     setMostraModal,
+    idProximoJogador,
+    
   };
 
   return (

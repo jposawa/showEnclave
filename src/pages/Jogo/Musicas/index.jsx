@@ -13,12 +13,13 @@ export default function Musicas() {
     setMostraModal,
     mostraModal,
     atualizaPontos,
+    idProximoJogador,
   } = useControle();
   const { jogadorAtual, faseAtual } = dadosJogo?.andamento;
   const perguntaAtual = dadosJogo?.perguntas[jogadorAtual][faseAtual];
   const [resposta, setResposta] = React.useState();
   const [musicaAtiva, setMusicaAtiva] = React.useState();
-  const {tocando, alterna, para, carregou} = useMusica(musicaAtiva?.url);
+  const {tocando, alterna, para, carregou, audioPronto} = useMusica(musicaAtiva?.url);
 
   const ativaMusica = (musica) => {
     setMusicaAtiva(musica);
@@ -28,6 +29,7 @@ export default function Musicas() {
   const respondeMusica = (acertou) => {
     const _musicaAtiva = {...musicaAtiva};
     const _dadosJogo = copiaDadosJogo();
+    const { jogadorAtual } = _dadosJogo.andamento;
     let modPonto = configJogo?.pontos.musicas.padrao;
     
     _musicaAtiva.tocada = true;
@@ -36,6 +38,8 @@ export default function Musicas() {
     if(!acertou) {
       modPonto *= configJogo?.pontos.musicas.proporcaoPerda;
     }
+
+    _dadosJogo.andamento.jogadorAtual = idProximoJogador(jogadorAtual);
 
     setMostraModal(false);
     atualizaPontos(modPonto, _dadosJogo);
@@ -72,10 +76,13 @@ export default function Musicas() {
           <h3>Nenhuma música carregada</h3>
         </> : <>
           <div className={styles.player}>
-            <Botao secundaria onClick={para}>&#9632;</Botao>
-            <Botao onClick={alterna}>
-              {!tocando ? <CaretRightOutlined/> : <PauseOutlined />}
-            </Botao>
+            {!audioPronto ? <p>Carregando música</p> : 
+            <>
+              <Botao secundaria onClick={para}>&#9632;</Botao>
+              <Botao onClick={alterna}>
+                {!tocando ? <CaretRightOutlined/> : <PauseOutlined />}
+              </Botao>
+            </>}
           </div>
           <br/>
           <div className={styles.slotBotoesModal}>

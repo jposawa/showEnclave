@@ -33,6 +33,8 @@
         "faseAtual": 1,
         "sequencia": []
       },
+      "iniciada": false,
+      "finalizando": false,
       "finalizada": false,
       "numeroRodada": 5,
       "jogadores": {
@@ -50,7 +52,7 @@
       "perguntas": {
         "jogador1": {
           "1":{
-            "enunciado": "TEXTO QUESTÃO 1",
+            "enunciado": "TEXTO QUESTÃO",
             "dificuldade": "facil",
             "opcoes": {
               "a": {
@@ -72,7 +74,7 @@
             }
           },
           "2":{
-            "enunciado": "TEXTO QUESTÃO 1",
+            "enunciado": "TEXTO QUESTÃO",
             "dificuldade": "facil",
             "opcoes": {
               "a": {
@@ -94,7 +96,7 @@
             }
           },
           "3":{
-            "enunciado": "TEXTO QUESTÃO 1",
+            "enunciado": "TEXTO QUESTÃO",
             "dificuldade": "facil",
             "opcoes": {
               "a": {
@@ -116,7 +118,7 @@
             }
           },
           "4":{
-            "enunciado": "TEXTO QUESTÃO 1",
+            "enunciado": "TEXTO QUESTÃO",
             "dificuldade": "facil",
             "opcoes": {
               "a": {
@@ -138,7 +140,7 @@
             }
           },
           "5":{
-            "enunciado": "TEXTO QUESTÃO 1",
+            "enunciado": "TEXTO QUESTÃO",
             "dificuldade": "facil",
             "opcoes": {
               "a": {
@@ -160,8 +162,8 @@
             }
           },
           "6":{
-            "enunciado": "TEXTO QUESTÃO 1",
-            "dificuldade": "facil",
+            "enunciado": "TEXTO QUESTÃO",
+            "dificuldade": "media",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
@@ -182,8 +184,8 @@
             }
           },
           "7":{
-            "enunciado": "TEXTO QUESTÃO 1",
-            "dificuldade": "facil",
+            "enunciado": "TEXTO QUESTÃO",
+            "dificuldade": "media",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
@@ -204,8 +206,8 @@
             }
           },
           "8":{
-            "enunciado": "TEXTO QUESTÃO 1",
-            "dificuldade": "facil",
+            "enunciado": "TEXTO QUESTÃO",
+            "dificuldade": "media",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
@@ -226,8 +228,8 @@
             }
           },
           "9":{
-            "enunciado": "TEXTO QUESTÃO 1",
-            "dificuldade": "facil",
+            "enunciado": "TEXTO QUESTÃO",
+            "dificuldade": "media",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
@@ -248,8 +250,8 @@
             }
           },
           "10":{
-            "enunciado": "TEXTO QUESTÃO 1",
-            "dificuldade": "facil",
+            "enunciado": "TEXTO QUESTÃO",
+            "dificuldade": "media",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
@@ -270,8 +272,8 @@
             }
           },
           "11":{
-            "enunciado": "TEXTO QUESTÃO 1",
-            "dificuldade": "facil",
+            "enunciado": "TEXTO QUESTÃO",
+            "dificuldade": "dificil",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
@@ -292,8 +294,8 @@
             }
           },
           "12":{
-            "enunciado": "TEXTO QUESTÃO 1",
-            "dificuldade": "facil",
+            "enunciado": "TEXTO QUESTÃO",
+            "dificuldade": "dificil",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
@@ -314,8 +316,8 @@
             }
           },
           "13":{
-            "enunciado": "TEXTO QUESTÃO 1",
-            "dificuldade": "facil",
+            "enunciado": "TEXTO QUESTÃO",
+            "dificuldade": "dificil",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
@@ -336,8 +338,8 @@
             }
           },
           "14":{
-            "enunciado": "TEXTO QUESTÃO 1",
-            "dificuldade": "facil",
+            "enunciado": "TEXTO QUESTÃO",
+            "dificuldade": "dificil",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
@@ -358,8 +360,8 @@
             }
           },
           "15":{
-            "enunciado": "TEXTO QUESTÃO 1",
-            "dificuldade": "facil",
+            "enunciado": "TEXTO QUESTÃO",
+            "dificuldade": "dificil",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
@@ -372,6 +374,28 @@
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
                 "correta": false
+              },
+              "d": {
+                "texto": "TEXTO ALTERNATIVA D",
+                "correta": false
+              }
+            }
+          },
+          "16":{
+            "enunciado": "TEXTO QUESTÃO",
+            "dificuldade": "final",
+            "opcoes": {
+              "a": {
+                "texto": "TEXTO ALTERNATIVA A",
+                "correta": false
+              },
+              "b": {
+                "texto": "TEXTO ALTERNATIVA B",
+                "correta": false
+              },
+              "c": {
+                "texto": "TEXTO ALTERNATIVA C",
+                "correta": true
               },
               "d": {
                 "texto": "TEXTO ALTERNATIVA D",
@@ -387,11 +411,11 @@
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
-                "correta": true
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
-                "correta": false
+                "correta": true
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
@@ -409,11 +433,11 @@
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
-                "correta": true
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
-                "correta": false
+                "correta": true
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
@@ -431,11 +455,11 @@
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
-                "correta": true
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
-                "correta": false
+                "correta": true
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
@@ -453,11 +477,11 @@
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
-                "correta": true
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
-                "correta": false
+                "correta": true
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
@@ -475,11 +499,11 @@
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
-                "correta": true
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
-                "correta": false
+                "correta": true
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
@@ -493,15 +517,15 @@
           },
           "6":{
             "enunciado": "TEXTO QUESTÃO",
-            "dificuldade": "facil",
+            "dificuldade": "media",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
-                "correta": true
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
-                "correta": false
+                "correta": true
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
@@ -515,15 +539,15 @@
           },
           "7":{
             "enunciado": "TEXTO QUESTÃO",
-            "dificuldade": "facil",
+            "dificuldade": "media",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
-                "correta": true
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
-                "correta": false
+                "correta": true
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
@@ -537,15 +561,15 @@
           },
           "8":{
             "enunciado": "TEXTO QUESTÃO",
-            "dificuldade": "facil",
+            "dificuldade": "media",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
-                "correta": true
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
-                "correta": false
+                "correta": true
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
@@ -559,15 +583,15 @@
           },
           "9":{
             "enunciado": "TEXTO QUESTÃO",
-            "dificuldade": "facil",
+            "dificuldade": "media",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
-                "correta": true
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
-                "correta": false
+                "correta": true
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
@@ -581,15 +605,15 @@
           },
           "10":{
             "enunciado": "TEXTO QUESTÃO",
-            "dificuldade": "facil",
+            "dificuldade": "media",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
-                "correta": true
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
-                "correta": false
+                "correta": true
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
@@ -603,15 +627,15 @@
           },
           "11":{
             "enunciado": "TEXTO QUESTÃO",
-            "dificuldade": "facil",
+            "dificuldade": "dificil",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
-                "correta": true
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
-                "correta": false
+                "correta": true
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
@@ -625,15 +649,15 @@
           },
           "12":{
             "enunciado": "TEXTO QUESTÃO",
-            "dificuldade": "facil",
+            "dificuldade": "dificil",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
-                "correta": true
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
-                "correta": false
+                "correta": true
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
@@ -647,15 +671,15 @@
           },
           "13":{
             "enunciado": "TEXTO QUESTÃO",
-            "dificuldade": "facil",
+            "dificuldade": "dificil",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
-                "correta": true
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
-                "correta": false
+                "correta": true
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
@@ -669,15 +693,15 @@
           },
           "14":{
             "enunciado": "TEXTO QUESTÃO",
-            "dificuldade": "facil",
+            "dificuldade": "dificil",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
-                "correta": true
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
-                "correta": false
+                "correta": true
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
@@ -691,11 +715,33 @@
           },
           "15":{
             "enunciado": "TEXTO QUESTÃO",
-            "dificuldade": "facil",
+            "dificuldade": "dificil",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
+                "correta": false
+              },
+              "b": {
+                "texto": "TEXTO ALTERNATIVA B",
                 "correta": true
+              },
+              "c": {
+                "texto": "TEXTO ALTERNATIVA C",
+                "correta": false
+              },
+              "d": {
+                "texto": "TEXTO ALTERNATIVA D",
+                "correta": false
+              }
+            }
+          },
+          "16":{
+            "enunciado": "TEXTO QUESTÃO",
+            "dificuldade": "final",
+            "opcoes": {
+              "a": {
+                "texto": "TEXTO ALTERNATIVA A",
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
@@ -703,7 +749,7 @@
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
-                "correta": false
+                "correta": true
               },
               "d": {
                 "texto": "TEXTO ALTERNATIVA D",
@@ -783,6 +829,8 @@
         "faseAtual": 1,
         "sequencia": []
       },
+      "iniciada": false,
+      "finalizando": false,
       "finalizada": false,
       "numeroRodada": 5,
       "jogadores": {
@@ -800,7 +848,7 @@
       "perguntas": {
         "jogador1": {
           "1":{
-            "enunciado": "TEXTO QUESTÃO 1",
+            "enunciado": "TEXTO QUESTÃO",
             "dificuldade": "facil",
             "opcoes": {
               "a": {
@@ -822,7 +870,7 @@
             }
           },
           "2":{
-            "enunciado": "TEXTO QUESTÃO 1",
+            "enunciado": "TEXTO QUESTÃO",
             "dificuldade": "facil",
             "opcoes": {
               "a": {
@@ -844,7 +892,7 @@
             }
           },
           "3":{
-            "enunciado": "TEXTO QUESTÃO 1",
+            "enunciado": "TEXTO QUESTÃO",
             "dificuldade": "facil",
             "opcoes": {
               "a": {
@@ -866,7 +914,7 @@
             }
           },
           "4":{
-            "enunciado": "TEXTO QUESTÃO 1",
+            "enunciado": "TEXTO QUESTÃO",
             "dificuldade": "facil",
             "opcoes": {
               "a": {
@@ -888,7 +936,7 @@
             }
           },
           "5":{
-            "enunciado": "TEXTO QUESTÃO 1",
+            "enunciado": "TEXTO QUESTÃO",
             "dificuldade": "facil",
             "opcoes": {
               "a": {
@@ -910,8 +958,8 @@
             }
           },
           "6":{
-            "enunciado": "TEXTO QUESTÃO 1",
-            "dificuldade": "facil",
+            "enunciado": "TEXTO QUESTÃO",
+            "dificuldade": "media",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
@@ -932,8 +980,8 @@
             }
           },
           "7":{
-            "enunciado": "TEXTO QUESTÃO 1",
-            "dificuldade": "facil",
+            "enunciado": "TEXTO QUESTÃO",
+            "dificuldade": "media",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
@@ -954,8 +1002,8 @@
             }
           },
           "8":{
-            "enunciado": "TEXTO QUESTÃO 1",
-            "dificuldade": "facil",
+            "enunciado": "TEXTO QUESTÃO",
+            "dificuldade": "media",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
@@ -976,8 +1024,8 @@
             }
           },
           "9":{
-            "enunciado": "TEXTO QUESTÃO 1",
-            "dificuldade": "facil",
+            "enunciado": "TEXTO QUESTÃO",
+            "dificuldade": "media",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
@@ -998,8 +1046,8 @@
             }
           },
           "10":{
-            "enunciado": "TEXTO QUESTÃO 1",
-            "dificuldade": "facil",
+            "enunciado": "TEXTO QUESTÃO",
+            "dificuldade": "media",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
@@ -1020,8 +1068,8 @@
             }
           },
           "11":{
-            "enunciado": "TEXTO QUESTÃO 1",
-            "dificuldade": "facil",
+            "enunciado": "TEXTO QUESTÃO",
+            "dificuldade": "dificil",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
@@ -1042,8 +1090,8 @@
             }
           },
           "12":{
-            "enunciado": "TEXTO QUESTÃO 1",
-            "dificuldade": "facil",
+            "enunciado": "TEXTO QUESTÃO",
+            "dificuldade": "dificil",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
@@ -1064,8 +1112,8 @@
             }
           },
           "13":{
-            "enunciado": "TEXTO QUESTÃO 1",
-            "dificuldade": "facil",
+            "enunciado": "TEXTO QUESTÃO",
+            "dificuldade": "dificil",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
@@ -1086,8 +1134,8 @@
             }
           },
           "14":{
-            "enunciado": "TEXTO QUESTÃO 1",
-            "dificuldade": "facil",
+            "enunciado": "TEXTO QUESTÃO",
+            "dificuldade": "dificil",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
@@ -1108,8 +1156,8 @@
             }
           },
           "15":{
-            "enunciado": "TEXTO QUESTÃO 1",
-            "dificuldade": "facil",
+            "enunciado": "TEXTO QUESTÃO",
+            "dificuldade": "dificil",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
@@ -1122,6 +1170,28 @@
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
                 "correta": false
+              },
+              "d": {
+                "texto": "TEXTO ALTERNATIVA D",
+                "correta": false
+              }
+            }
+          },
+          "16":{
+            "enunciado": "TEXTO QUESTÃO",
+            "dificuldade": "final",
+            "opcoes": {
+              "a": {
+                "texto": "TEXTO ALTERNATIVA A",
+                "correta": false
+              },
+              "b": {
+                "texto": "TEXTO ALTERNATIVA B",
+                "correta": false
+              },
+              "c": {
+                "texto": "TEXTO ALTERNATIVA C",
+                "correta": true
               },
               "d": {
                 "texto": "TEXTO ALTERNATIVA D",
@@ -1137,11 +1207,11 @@
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
-                "correta": true
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
-                "correta": false
+                "correta": true
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
@@ -1159,11 +1229,11 @@
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
-                "correta": true
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
-                "correta": false
+                "correta": true
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
@@ -1181,11 +1251,11 @@
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
-                "correta": true
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
-                "correta": false
+                "correta": true
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
@@ -1203,11 +1273,11 @@
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
-                "correta": true
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
-                "correta": false
+                "correta": true
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
@@ -1225,11 +1295,11 @@
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
-                "correta": true
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
-                "correta": false
+                "correta": true
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
@@ -1243,15 +1313,15 @@
           },
           "6":{
             "enunciado": "TEXTO QUESTÃO",
-            "dificuldade": "facil",
+            "dificuldade": "media",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
-                "correta": true
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
-                "correta": false
+                "correta": true
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
@@ -1265,15 +1335,15 @@
           },
           "7":{
             "enunciado": "TEXTO QUESTÃO",
-            "dificuldade": "facil",
+            "dificuldade": "media",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
-                "correta": true
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
-                "correta": false
+                "correta": true
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
@@ -1287,15 +1357,15 @@
           },
           "8":{
             "enunciado": "TEXTO QUESTÃO",
-            "dificuldade": "facil",
+            "dificuldade": "media",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
-                "correta": true
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
-                "correta": false
+                "correta": true
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
@@ -1309,15 +1379,15 @@
           },
           "9":{
             "enunciado": "TEXTO QUESTÃO",
-            "dificuldade": "facil",
+            "dificuldade": "media",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
-                "correta": true
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
-                "correta": false
+                "correta": true
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
@@ -1331,15 +1401,15 @@
           },
           "10":{
             "enunciado": "TEXTO QUESTÃO",
-            "dificuldade": "facil",
+            "dificuldade": "media",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
-                "correta": true
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
-                "correta": false
+                "correta": true
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
@@ -1353,15 +1423,15 @@
           },
           "11":{
             "enunciado": "TEXTO QUESTÃO",
-            "dificuldade": "facil",
+            "dificuldade": "dificil",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
-                "correta": true
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
-                "correta": false
+                "correta": true
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
@@ -1375,15 +1445,15 @@
           },
           "12":{
             "enunciado": "TEXTO QUESTÃO",
-            "dificuldade": "facil",
+            "dificuldade": "dificil",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
-                "correta": true
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
-                "correta": false
+                "correta": true
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
@@ -1397,15 +1467,15 @@
           },
           "13":{
             "enunciado": "TEXTO QUESTÃO",
-            "dificuldade": "facil",
+            "dificuldade": "dificil",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
-                "correta": true
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
-                "correta": false
+                "correta": true
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
@@ -1419,15 +1489,15 @@
           },
           "14":{
             "enunciado": "TEXTO QUESTÃO",
-            "dificuldade": "facil",
+            "dificuldade": "dificil",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
-                "correta": true
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
-                "correta": false
+                "correta": true
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
@@ -1441,11 +1511,33 @@
           },
           "15":{
             "enunciado": "TEXTO QUESTÃO",
-            "dificuldade": "facil",
+            "dificuldade": "dificil",
             "opcoes": {
               "a": {
                 "texto": "TEXTO ALTERNATIVA A",
+                "correta": false
+              },
+              "b": {
+                "texto": "TEXTO ALTERNATIVA B",
                 "correta": true
+              },
+              "c": {
+                "texto": "TEXTO ALTERNATIVA C",
+                "correta": false
+              },
+              "d": {
+                "texto": "TEXTO ALTERNATIVA D",
+                "correta": false
+              }
+            }
+          },
+          "16":{
+            "enunciado": "TEXTO QUESTÃO",
+            "dificuldade": "final",
+            "opcoes": {
+              "a": {
+                "texto": "TEXTO ALTERNATIVA A",
+                "correta": false
               },
               "b": {
                 "texto": "TEXTO ALTERNATIVA B",
@@ -1453,7 +1545,7 @@
               },
               "c": {
                 "texto": "TEXTO ALTERNATIVA C",
-                "correta": false
+                "correta": true
               },
               "d": {
                 "texto": "TEXTO ALTERNATIVA D",
@@ -1466,63 +1558,63 @@
       "musicas": {
         "1": {
           "nomeMusica": "Nome da Música",
-          "url": "link da música",
+          "url": "https://drive.google.com/file/d/1MCgklZ1SsdhE0VrMUJgMiCWF0WYgoqWB/view?usp=sharing",
           "tocada": false
         },
         "2": {
           "nomeMusica": "Nome da Música",
-          "url": "link da música",
+          "url": "https://drive.google.com/file/d/1MCgklZ1SsdhE0VrMUJgMiCWF0WYgoqWB/view?usp=sharing",
           "tocada": false
         },
         "3": {
           "nomeMusica": "Nome da Música",
-          "url": "link da música",
+          "url": "https://drive.google.com/file/d/1MCgklZ1SsdhE0VrMUJgMiCWF0WYgoqWB/view?usp=sharing",
           "tocada": false
         },
         "4": {
           "nomeMusica": "Nome da Música",
           "url": "link da música",
-          "tocada": false
+          "tocada": true
         },
         "5": {
           "nomeMusica": "Nome da Música",
           "url": "link da música",
-          "tocada": false
+          "tocada": true
         },
         "6": {
           "nomeMusica": "Nome da Música",
           "url": "link da música",
-          "tocada": false
+          "tocada": true
         },
         "7": {
           "nomeMusica": "Nome da Música",
           "url": "link da música",
-          "tocada": false
+          "tocada": true
         },
         "8": {
           "nomeMusica": "Nome da Música",
           "url": "link da música",
-          "tocada": false
+          "tocada": true
         },
         "9": {
           "nomeMusica": "Nome da Música",
           "url": "link da música",
-          "tocada": false
+          "tocada": true
         },
         "10": {
           "nomeMusica": "Nome da Música",
           "url": "link da música",
-          "tocada": false
+          "tocada": true
         },
         "11": {
           "nomeMusica": "Nome da Música",
           "url": "link da música",
-          "tocada": false
+          "tocada": true
         },
         "12": {
           "nomeMusica": "Nome da Música",
           "url": "link da música",
-          "tocada": false
+          "tocada": true
         }
       }
     }

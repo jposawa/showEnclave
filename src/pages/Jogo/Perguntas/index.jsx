@@ -79,7 +79,7 @@ export default function Perguntas() {
               <Botao
                 key={letra}
                 name={letra}
-                secundario={letra === resposta}
+                terciario={letra === resposta}
                 className={letra === resposta ? styles.respostaAtiva : undefined}
                 onClick={() => {alteraResposta(letra)}}
               >
@@ -93,6 +93,7 @@ export default function Perguntas() {
           <Botao
             className={`${styles.btnConfirma} ${resposta && !mostraProximo ? undefined : "oculto"}`}
             largura="7rem"
+            secundaria
             onClick={() => {verificaRespostaPontos(resposta, styles)}}
           >
             CONFIRMAR

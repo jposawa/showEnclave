@@ -33,7 +33,7 @@ export default function Inicio() {
       jogador1: jogador1,
       jogador2: jogador2,
       primeiro: primeiro
-    }, true);
+    });
     setMostraModal(false);
   }
   
@@ -67,17 +67,28 @@ export default function Inicio() {
             <span>Jogador 2: </span>
             <Campo placeholder="Nome jogador 2" ref={refJogador2} value={dadosJogo?.jogadores?.jogador2?.nome}/>
           </p>
-          <p>
-            <span>Jogador inicial: </span>
-            <select ref={refPrimeiro}>
-              <option value="jogador1">Jogador 1</option>
-              <option value="jogador2">Jogador 2</option>
-            </select>
-          </p>
-          <br/>
-          <div className={styles.slotBotao}>
-            <Botao type="submit">Salvar</Botao>
-          </div>
+          
+          {!dadosJogo?.iniciado && 
+            <>
+              <p>
+                <span>Jogador inicial: </span>
+                <select ref={refPrimeiro}>
+                  <option value="jogador1">
+                    { refJogador1.current ? refJogador1.current.value : "Jogador 1" }
+                  </option>
+                  
+                  <option value="jogador2">
+                    { refJogador2.current ? refJogador2.current.value : "Jogador 2" }
+                  </option>
+                </select>
+              </p>
+              <br/>
+            
+              <div className={styles.slotBotao}>
+                <Botao type="submit">Salvar</Botao>
+              </div>
+            </>
+          }
         </form>
       </Modal>
     </>

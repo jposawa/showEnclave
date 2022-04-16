@@ -4,6 +4,8 @@ export const useMusica = (url) => {
   const [audio, setAudio] = React.useState(new Audio());
   const [tocando, setTocando] = React.useState(false);
   const [carregou, setCarregou] = React.useState(false);
+  const [audioPronto, setAudioPronto] = React.useState(false);
+  const [readyCode, setReadyCode] = React.useState(0);
 
   const alterna = () => {setTocando(!tocando)};
   const para = () => {
@@ -38,8 +40,10 @@ export const useMusica = (url) => {
 
   React.useMemo(() => {
     const urlUtilizavel = geraUrlUtilizavel(url);
+    const _audio = new Audio(urlUtilizavel);
+    _audio.preload = "auto";
 
-    setAudio(new Audio(urlUtilizavel));
+    setAudio(_audio);
     setCarregou(!!urlUtilizavel);
   }, [url]);
 
@@ -47,18 +51,39 @@ export const useMusica = (url) => {
     tocando ? audio.play() : audio.pause();
   }, [tocando]);
 
-  React.useEffect(() => {
-    audio.addEventListener('ended', () => setTocando(false));
-
-    return () => {
-      audio.removeEventListener('ended', () => setTocando(false));
+  React.useMemo(() => {
+    if(carregou && audio?.readyState === 0) {
+      audio.load();
     }
-  }, []);
+  }, [audio])
+
+  React.useMemo(() => {
+    if(audio) {
+      audio.addEventListener('ended', () => setTocando(false));
+      audio.addEventListener('loadeddata', () => {
+
+        if(audio.readyState >= 2){
+          setAudioPronto(true);
+        }
+      });
+  
+      return () => {
+        audio.addEventListener('ended', () => setTocando(false));
+        audio.addEventListener('loadeddata', () => {
+  
+          if(audio.readyState >= 2){
+            setAudioPronto(true);
+          }
+        });
+      }
+    }
+  }, [audio]);
 
   return {
     tocando,
     alterna,
     para,
     carregou,
+    audioPronto,
   };
 }

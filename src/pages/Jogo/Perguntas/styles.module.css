@@ -68,9 +68,9 @@
   --altura: 2rem;
 }
 
-.btnConfirma {
+/* .btnConfirma {
   --corBotao: var(--corTerciaria);
-}
+} */
 
 .slotBotoesModal {
   width: 100%;

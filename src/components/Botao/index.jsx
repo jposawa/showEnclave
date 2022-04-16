@@ -10,6 +10,8 @@ export default function Triangulo(props) {
     largura, 
     secundaria, 
     secundario, 
+    terciaria,
+    terciario,
     complementar, 
     name, 
     disabled, 
@@ -17,6 +19,7 @@ export default function Triangulo(props) {
   } = props;
 
   const classeSecundaria = secundaria || secundario;
+  const classeTerciaria = terciaria || terciario;
 
   const handleClick = (event) => {
     if(onClick) {
@@ -30,7 +33,7 @@ export default function Triangulo(props) {
       className={`
         ${styles.botao} 
         ${className} 
-        ${confirma ? styles.modoConfirma : complementar ? styles.modoComplementar : classeSecundaria ? styles.modoSecundario : undefined}
+        ${confirma ? styles.modoConfirma : complementar ? styles.modoComplementar : classeSecundaria ? styles.modoSecundario : classeTerciaria ? styles.modoTerciario : undefined}
       `} 
       type={type} 
       onClick={handleClick}

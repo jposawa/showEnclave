@@ -37,6 +37,11 @@
   --corBotao2: var(--corComplementar);
 }
 
+.modoTerciario {
+  --corBotao: var(--corTerciaria);
+  --corBotao2: var(--corPrimariaEscura);
+}
+
 .modoComplementar {
   --corBotao: var(--corComplementarEscura);
   --corBotao2: var(--corPrimariaMaisClara);
