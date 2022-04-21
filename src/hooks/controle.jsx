@@ -209,12 +209,21 @@ export const ControleProvider = ({children}) => {
     });
   }
 
+  const iniciaJogo = () => {
+    const _dadosJogo = copiaDadosJogo();
+
+    _dadosJogo.iniciado = true;
+
+    setDadosJogo(_dadosJogo);
+    navigate("/jogo");
+  }
+
   const atualizaJogadores = (jogadores, atualizaSequencia, iniciarJogo) => {
     const _dadosJogo = copiaDadosJogo();
     const {jogador1, jogador2, primeiro} = jogadores;
 
-    _dadosJogo.jogadores.[primeiro].nome = jogador1;
-    _dadosJogo.jogadores.[idProximoJogador(primeiro)].nome = jogador2;
+    _dadosJogo.jogadores[primeiro].nome = jogador1;
+    _dadosJogo.jogadores[idProximoJogador(primeiro)].nome = jogador2;
 
     if(atualizaSequencia) {
       _dadosJogo.andamento.jogadorAtual = primeiro;
@@ -226,15 +235,6 @@ export const ControleProvider = ({children}) => {
     if(iniciarJogo) {
       iniciaJogo();
     }
-  }
-
-  const iniciaJogo = () => {
-    const _dadosJogo = copiaDadosJogo();
-
-    _dadosJogo.iniciado = true;
-
-    setDadosJogo(_dadosJogo);
-    navigate("/jogo");
   }
 
   const ajustaNomeDificuldade = (dificuldade) => {
