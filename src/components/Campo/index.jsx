@@ -5,13 +5,13 @@ import styles from "./styles.module.css";
 
 export const Campo = React.forwardRef((props, ref) => {
   const {className, type, secundaria, secundario, value, placeholder} = props;
-  const { jogoIniciado } = useControle();
+  const { dadosJogo } = useControle();
 
   const classeSecundaria = secundaria || secundario;
 
   return (
     <>
-      { jogoIniciado ? (
+      { dadosJogo?.iniciado ? (
         <span className={`${styles.valorCampo} ${className}`}>{value}</span>
       ) : (
         <input 

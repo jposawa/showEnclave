@@ -5,6 +5,9 @@ import Holocron from "./Holocron";
 import Menu from "./Menu";
 import SimboloHolocron from "./SimboloHolocron";
 import Triangulo from "./Triangulo";
+import Modal from "./Modal";
+import Ajuda from "./Ajuda";
+import Carregando from "./Carregando";
 
 export {
   Botao,
@@ -13,5 +16,8 @@ export {
   Holocron,
   Menu,
   SimboloHolocron,
-  Triangulo
+  Triangulo,
+  Modal,
+  Ajuda,
+  Carregando,
 }

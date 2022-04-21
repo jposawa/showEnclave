@@ -9,6 +9,7 @@
   --corSecundariaMaisEscura: rgb(1,83,90);
   --corSecundariaClara: rgb(14,163,177);
   --corSecundariaMaisClara: rgb(52,170,182);
+  --corTerciaria: #747;
   --corComplementar: rgb(239,162,0);
   --corComplementarEscura: rgb(192,130,0);
   --corComplementarMaisEscura: rgb(148,101,0);
@@ -17,6 +18,8 @@
 
   --corFundoPrincipal: rgb(23,33,45);
   --corTextoPrincipal: rgb(230,230,230);
+
+  --corConfirma: #174;
 
   --corBordaHolocron: #b7b734;
 }

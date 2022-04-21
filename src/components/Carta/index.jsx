@@ -7,6 +7,7 @@ import styles from "./styles.module.css";
 
 export default function Carta(props) {
   const {
+    name,
     animado,
     positiva,
     negativa, 
@@ -50,6 +51,10 @@ export default function Carta(props) {
       
       setGrauOver(`${valorGrau}deg`);
     }
+
+    if(onClick) {
+      onClick();
+    }
   }
 
   sinais.push(_mutavel ? "±" : positiva ? "+" : negativa ? "-" : "");
@@ -59,7 +64,7 @@ export default function Carta(props) {
   }
   
   return (
-    <div ref={cartaRef} onClick={aplicaClique} className={`${styles.containerCarta} ${virada ? styles.virada : ""}`} style={{
+    <div name={name} ref={cartaRef} onClick={aplicaClique} className={`${styles.containerCarta} ${virada ? styles.virada : ""}`} style={{
       "--altura":altura,
       "--fundoPrimario":corPrimaria,
       "--fundoSecundario":corSecundaria,
