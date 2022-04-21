@@ -36,11 +36,14 @@ export default function Triangulo(props) {
         ${styles.botao} 
         ${className} 
         ${confirma ? styles.modoConfirma : complementar ? styles.modoComplementar : classeSecundaria ? styles.modoSecundario : classeTerciaria ? styles.modoTerciario : undefined}
+
       `} 
       type={type} 
       onClick={handleClick}
       style={{"--largura":largura}}
+
       disabled={disabled}
+
     >
       {children ? children : "Botão"}
     </button>
