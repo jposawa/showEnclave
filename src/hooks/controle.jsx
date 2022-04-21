@@ -75,6 +75,29 @@ export const ControleProvider = ({children}) => {
   const [mostraProximo, setMostraProximo] = React.useState(false);
   const [mostraModal, setMostraModal] = React.useState(false);
   const [ajudaAtiva, setAjudaAtiva] = React.useState();
+  const cartas = {
+    c1: {
+      valor: 1,
+      negativa: true,
+      mista: false,
+    },
+    c2: {
+      valor: 2,
+      negativa: true,
+      mista: false,
+    },
+    c3: {
+      valor: 3,
+      negativa: true,
+      mista: false,
+    },
+    c4: {
+      valor: 3,
+      negativa: false,
+      mista: true,
+    },
+  }
+  const [alternativasDescartadas, setAlternativasDescartadas] = React.useState(0);
 
   const formataTextoPontos = (pontos) => {
     if(pontos === 1) {
@@ -317,6 +340,18 @@ export const ControleProvider = ({children}) => {
     setDadosJogo(_dadosJogo);
   }
 
+  const eliminaErradas = (numAlternativas) => {}
+
+  const recuperaAjuda = (tipoAjuda) => {
+    const _dadosJogo = copiaDadosJogo();
+    const {jogadorAtual} = _dadosJogo.andamento;
+
+    _dadosJogo.jogadores[jogadorAtual].ajudas[tipoAjuda] += 1;
+
+    fechaAjuda();
+    setDadosJogo(_dadosJogo);
+  }
+
   //Executa logo que os elementos do DOM são carregados, fazendo a configuração inicial
   useEffect(()=>{
     setFbApp(initializeApp(CONFIG.FB_CONFIG));
@@ -359,6 +394,11 @@ export const ControleProvider = ({children}) => {
     ajudaAtiva,
     setAjudaAtiva,
     fechaAjuda,
+    cartas,
+    eliminaErradas,
+    recuperaAjuda,
+    alternativasDescartadas,
+    setAlternativasDescartadas
   };
 
   return (

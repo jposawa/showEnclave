@@ -35,9 +35,10 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  gap: 4%;
 }
 
-.slotAlternativas>button {
+.alternativa {
   flex: 0 0 47%;
 
 /*   --largura: 12rem; */
@@ -55,6 +56,12 @@
 
 .alternativaErrada {
   background: var(--corComplementar);
+}
+
+.descartada {
+  opacity: 0.3 !important;
+  --corBotao: var(--corPrimaria) !important;
+  --corBotao2: var(--corBotao) !important;
 }
 
 .slotBotoes {

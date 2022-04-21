@@ -16,6 +16,7 @@ export default function Perguntas() {
     proximaFase,
     setMostraModal,
     proximaEtapa,
+    alternativasDescartadas,
   } = useControle();
   const { jogadorAtual, faseAtual } = dadosJogo?.andamento;
   const perguntaAtual = dadosJogo?.perguntas[jogadorAtual][faseAtual];
@@ -33,6 +34,7 @@ export default function Perguntas() {
 
     Object.values(elementoSlotAlternativas.children).forEach((elementoAlternativa) => {
       elementoAlternativa.classList.remove(styles.alternativaCorreta);
+      elementoAlternativa.disabled = false;
     })
   }
 
@@ -56,6 +58,39 @@ export default function Perguntas() {
       proximaEtapa();
     }
   }
+
+  React.useMemo(()=>{
+    const listaAlternativas = Object.values(document.getElementsByClassName(styles.alternativa));
+    
+    if(alternativasDescartadas === 0) {
+      listaAlternativas.forEach((alt) => {
+        alt.classList.remove(styles.descartada);
+        alt.disabled = false;
+      });
+    }
+    else {
+      const alternativasErradas = listaAlternativas.filter((alt) => (
+        !perguntaAtual.opcoes[alt.name].correta
+      ));
+
+      const alternativasDesativadas = alternativasErradas.filter((alt) => (
+        alt.disabled
+      ));
+
+      if(alternativasDesativadas.length === 0) {
+        for(let i = 0; i < 3 - alternativasDescartadas; i++){
+          const _indice = Math.floor((Math.random() * alternativasErradas.length));
+  
+          alternativasErradas.splice(_indice, 1);
+        }
+  
+        alternativasErradas.forEach((alt) => {
+          alt.classList.add(styles.descartada);
+          alt.disabled = true;
+        })
+      }
+    }
+  },[alternativasDescartadas]);
   
   return (
     <div className={styles.perguntas}>
@@ -80,7 +115,7 @@ export default function Perguntas() {
                 key={letra}
                 name={letra}
                 terciario={letra === resposta}
-                className={letra === resposta ? styles.respostaAtiva : undefined}
+                className={`${styles.alternativa} ${letra === resposta ? styles.respostaAtiva : undefined}`}
                 onClick={() => {alteraResposta(letra)}}
               >
                 {letra.toUpperCase()}: {opcao.texto}
