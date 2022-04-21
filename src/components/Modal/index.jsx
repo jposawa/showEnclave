@@ -11,7 +11,7 @@ export default function Modal(props) {
 
   return(
     <div className={`${styles.modal} ${_mostra ? "" : "oculto"} ${corpoTransparente ? styles.corpoTransparente : ""}`}>
-      <span className={styles.fundoModal} onClick={() => {setMostraModal(false || proibidoFechar)}}/>
+      <span className={styles.fundoModal} onClick={() => { if(!proibidoFechar) {setMostraModal(false)}}}/>
 
       <div className={styles.corpoModal}>
         {!proibidoFechar && 
