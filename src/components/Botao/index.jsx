@@ -3,6 +3,7 @@ import styles from "./styles.module.css";
 
 export default function Triangulo(props) {
   const {
+    id,
     className, 
     type, 
     children, 
@@ -29,6 +30,7 @@ export default function Triangulo(props) {
 
   return (
     <button
+      id={id}
       name={name}
       className={`
         ${styles.botao} 

@@ -48,3 +48,7 @@ button {
   visibility: hidden !important;
   opacity: 0 !important;
 }
+
+.virado90 {
+  transform: rotate(90deg);
+}

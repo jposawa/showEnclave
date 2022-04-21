@@ -40,6 +40,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: background 0.3s;
+}
+
+.corpoTransparente .corpoModal {
+  background: rgba(0,0,0,0);
 }
 
 .fechaModal {

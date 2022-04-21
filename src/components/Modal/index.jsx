@@ -4,11 +4,13 @@ import {useControle} from "../../hooks/controle";
 import styles from "./styles.module.css";
 
 export default function Modal(props) {
-  const {children, proibidoFechar} = props;
+  const {children, proibidoFechar, mostra, corpoTransparente} = props;
   const {mostraModal, setMostraModal} = useControle();
 
+  const _mostra = React.useMemo(() => !!(mostra ^ mostraModal), [mostraModal, mostra]);
+
   return(
-    <div className={`${styles.modal} ${mostraModal ? "" : "oculto"}`}>
+    <div className={`${styles.modal} ${_mostra ? "" : "oculto"} ${corpoTransparente ? styles.corpoTransparente : ""}`}>
       <span className={styles.fundoModal} onClick={() => {setMostraModal(false || proibidoFechar)}}/>
 
       <div className={styles.corpoModal}>

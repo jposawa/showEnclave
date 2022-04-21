@@ -28,7 +28,7 @@ export const ControleProvider = ({children}) => {
         nome: "perguntas",
         alterna: false,
         sequencial: true,
-        numFases: 15,
+        numFases: 16,
       },
       musicas: {
         nome: "musicas",
@@ -74,6 +74,7 @@ export const ControleProvider = ({children}) => {
   const navigate = useNavigate();
   const [mostraProximo, setMostraProximo] = React.useState(false);
   const [mostraModal, setMostraModal] = React.useState(false);
+  const [ajudaAtiva, setAjudaAtiva] = React.useState();
 
   const formataTextoPontos = (pontos) => {
     if(pontos === 1) {
@@ -213,8 +214,9 @@ export const ControleProvider = ({children}) => {
   const ajustaNomeDificuldade = (dificuldade) => {
     const dificuldades = {
       facil: "fácil",
-      medio: "médio",
+      media: "média",
       dificil: "difícil",
+      final: "Pergunta do Bião",
     }
 
     return dificuldades[dificuldade];
@@ -252,9 +254,13 @@ export const ControleProvider = ({children}) => {
   const atualizaPontos = (modPontos, _dadosJogo) => {
     _dadosJogo = _dadosJogo ? _dadosJogo : copiaDadosJogo();
     modPontos = !isNaN(parseInt(modPontos)) ? parseInt(modPontos) : 0;
-    const { jogadorAtual } = _dadosJogo?.andamento;
+    const { jogadorAtual, etapaAtual } = _dadosJogo?.andamento;
 
     _dadosJogo.jogadores[jogadorAtual].pontos += modPontos;
+
+    if(configJogo.fluxo[etapaAtual].alterna) {
+      _dadosJogo.andamento.jogadorAtual = idProximoJogador(jogadorAtual);
+    }
     
     setDadosJogo(_dadosJogo);
   }
@@ -301,6 +307,16 @@ export const ControleProvider = ({children}) => {
     setMostraProximo(false);
   }
 
+  const fechaAjuda = () => {
+    const _dadosJogo = copiaDadosJogo();
+    const {jogadorAtual} = _dadosJogo?.andamento;
+
+    _dadosJogo.jogadores[jogadorAtual].ajudas[ajudaAtiva] -= 1;
+
+    setAjudaAtiva();
+    setDadosJogo(_dadosJogo);
+  }
+
   //Executa logo que os elementos do DOM são carregados, fazendo a configuração inicial
   useEffect(()=>{
     setFbApp(initializeApp(CONFIG.FB_CONFIG));
@@ -340,7 +356,9 @@ export const ControleProvider = ({children}) => {
     mostraModal,
     setMostraModal,
     idProximoJogador,
-    
+    ajudaAtiva,
+    setAjudaAtiva,
+    fechaAjuda,
   };
 
   return (

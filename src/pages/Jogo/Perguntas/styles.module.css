@@ -25,6 +25,7 @@
 .enunciado {
   width: 100%;
   height: calc(100% - var(--alturaEnunciados));
+  padding: 2% 5%;
 }
 
 .slotAlternativas {

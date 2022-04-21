@@ -32,14 +32,13 @@ export default function Musicas() {
     const { jogadorAtual } = _dadosJogo.andamento;
     let modPonto = configJogo?.pontos.musicas.padrao;
     
-    _musicaAtiva.tocada = true;
-    _dadosJogo.musicas[musicaAtiva.numero] = {..._musicaAtiva};
+    _dadosJogo.musicas[musicaAtiva.numero].tocada = true;
 
     if(!acertou) {
       modPonto *= configJogo?.pontos.musicas.proporcaoPerda;
     }
 
-    _dadosJogo.andamento.jogadorAtual = idProximoJogador(jogadorAtual);
+    // _dadosJogo.andamento.jogadorAtual = idProximoJogador(jogadorAtual);
 
     setMostraModal(false);
     atualizaPontos(modPonto, _dadosJogo);

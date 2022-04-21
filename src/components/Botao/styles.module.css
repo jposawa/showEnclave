@@ -6,6 +6,7 @@
   --gradiente: linear-gradient(90deg, var(--cor1) 10% , var(--cor2) 30%, var(--cor1) 60%);
   --tempoTransicao: 0.3s;
 
+  position: relative;
   width: var(--largura);
   height: var(--altura);
   padding: 0.2rem;
@@ -50,4 +51,10 @@
 .modoConfirma {
   --corBotao: var(--corConfirma);
   --corBotao2: var(--corPrimariaEscura);
+}
+
+.botao>label{
+  position: absolute;
+  font-size: 0.5em;
+  top: 100%;
 }

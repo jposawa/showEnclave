@@ -6,6 +6,7 @@
         "proporcaoPerda": -0.5,
         "facil": 250,
         "medio": 500,
+        "media": 500,
         "dificil": 1000,
         "final": 5000
       },
@@ -41,12 +42,22 @@
         "jogador1": {
           "nome": "",
           "pontos": 0,
-          "id": "jogador1"
+          "id": "jogador1",
+          "ajudas": {
+            "cartas": 1,
+            "chat": 1,
+            "universitarios": 1
+          }
         },
         "jogador2": {
           "nome": "",
           "pontos": 0,
-          "id": "jogador2"
+          "id": "jogador2",
+          "ajudas": {
+            "cartas": 1,
+            "chat": 1,
+            "universitarios": 1
+          }
         }
       },
       "perguntas": {
@@ -837,12 +848,22 @@
         "jogador1": {
           "nome": "",
           "pontos": 0,
-          "id": "jogador1"
+          "id": "jogador1",
+          "ajudas": {
+            "cartas": 1,
+            "chat": 1,
+            "universitarios": 1
+          }
         },
         "jogador2": {
           "nome": "",
           "pontos": 0,
-          "id": "jogador2"
+          "id": "jogador2",
+          "ajudas": {
+            "cartas": 1,
+            "chat": 1,
+            "universitarios": 1
+          }
         }
       },
       "perguntas": {
@@ -1563,12 +1584,12 @@
         },
         "2": {
           "nomeMusica": "Nome da Música",
-          "url": "https://drive.google.com/file/d/1MCgklZ1SsdhE0VrMUJgMiCWF0WYgoqWB/view?usp=sharing",
+          "url": "https://drive.google.com/file/d/1vbIeCYsyockq6aMSNAX_RJdLbgAA_4ah/view?usp=sharing",
           "tocada": false
         },
         "3": {
           "nomeMusica": "Nome da Música",
-          "url": "https://drive.google.com/file/d/1MCgklZ1SsdhE0VrMUJgMiCWF0WYgoqWB/view?usp=sharing",
+          "url": "https://drive.google.com/file/d/1wIcm9WA9smWh2jNHg_XWzfm1RqnixAlm/view?usp=sharing",
           "tocada": false
         },
         "4": {
