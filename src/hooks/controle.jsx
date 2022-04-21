@@ -209,6 +209,15 @@ export const ControleProvider = ({children}) => {
     });
   }
 
+  const iniciaJogo = () => {
+    const _dadosJogo = copiaDadosJogo();
+
+    _dadosJogo.iniciado = true;
+
+    setDadosJogo(_dadosJogo);
+    navigate("/jogo");
+  }
+
   const atualizaJogadores = (jogadores, atualizaSequencia, iniciarJogo) => {
     const _dadosJogo = copiaDadosJogo();
     const {jogador1, jogador2, primeiro} = jogadores;
@@ -226,15 +235,6 @@ export const ControleProvider = ({children}) => {
     if(iniciarJogo) {
       iniciaJogo();
     }
-  }
-
-  const iniciaJogo = () => {
-    const _dadosJogo = copiaDadosJogo();
-
-    _dadosJogo.iniciado = true;
-
-    setDadosJogo(_dadosJogo);
-    navigate("/jogo");
   }
 
   const ajustaNomeDificuldade = (dificuldade) => {
