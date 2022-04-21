@@ -72,68 +72,72 @@ export default function Ajuda(props) {
   }
 
   return(
-    <Modal mostra={mostra} proibidoFechar corpoTransparente={tipo === "cartas"}>
-      {
-        {
-          "universitarios": 
-            <>
-              <div className={styles.containerHolocron}>
-                <Holocron tamanho="10vmin"/>
-              </div>
-              <br/><br/>
-              <h3>Consultando convidados</h3>
-              <Botao onClick={()=>{fechaAjuda()}}>Responder</Botao>
-            </>,
-          "chat": 
-            <div className={styles.ajudaChat}>
-              <div className={styles.slotCarregando}>
-                <Carregando tempo={15} setMostraBotao={setMostraBotao}/>
-              </div>
-              
-              {mostraBotao ? <Botao onClick={()=>{fechaAjuda()}}>Responder</Botao> : <p>Aguardando chat</p>}
-            </div>,
-          "cartas": 
-            <div className={styles.ajudaCartas}>
-              <div className={styles.slotCartas}>
-                {cartasAjuda && cartasAjuda.map((carta) => (
-                  <Carta
-                    key={carta.id}
-                    name={`carta${carta.id}`}
-                    altura="max(7rem,20vmin)"
-                    virada
-                    viraClique
-                    mista={carta.mista}
-                    negativa={carta.negativa}
-                    valor={carta.valor}
-                    onClick={() => {escolheCarta(carta)}}
-                  />
-                ))}
-              </div>
-              
-              <div className={`${styles.slotRecuperaAjuda} ${mostraRecuperaAjuda ? "" : "oculto"}`}>
-                <h3>Escolha tipo de ajuda extra</h3>
-                
-                <div>
-                  <Botao
-                    secundario
-                    onClick={()=>{chamaRecuperaAjuda("universitarios")}}
-                  >
-                    <IdcardOutlined />
-                    <span className={styles.labelAjuda}>Convidados</span>
-                  </Botao>
-  
-                  <Botao
-                    secundario
-                    onClick={()=>{chamaRecuperaAjuda("chat")}}
-                  >
-                    <MessageOutlined />
-                    <span className={styles.labelAjuda}>Chat</span>
-                  </Botao>
-                </div>
-              </div>
-            </div>,
-        }[tipo]
+    <>
+      {mostra && 
+        <Modal mostra={mostra} proibidoFechar corpoTransparente={tipo === "cartas"}>
+          {
+            {
+              "universitarios": 
+                <>
+                  <div className={styles.containerHolocron}>
+                    <Holocron tamanho="10vmin"/>
+                  </div>
+                  <br/><br/>
+                  <h3>Consultando convidados</h3>
+                  <Botao onClick={()=>{fechaAjuda()}}>Responder</Botao>
+                </>,
+              "chat": 
+                <div className={styles.ajudaChat}>
+                  <div className={styles.slotCarregando}>
+                    <Carregando tempo={15} setMostraBotao={setMostraBotao}/>
+                  </div>
+                  
+                  {mostraBotao ? <Botao onClick={()=>{fechaAjuda()}}>Responder</Botao> : <p>Aguardando chat</p>}
+                </div>,
+              "cartas": 
+                <div className={styles.ajudaCartas}>
+                  <div className={styles.slotCartas}>
+                    {cartasAjuda && cartasAjuda.map((carta) => (
+                      <Carta
+                        key={carta.id}
+                        name={`carta${carta.id}`}
+                        altura="max(7rem,20vmin)"
+                        virada
+                        viraClique
+                        mista={carta.mista}
+                        negativa={carta.negativa}
+                        valor={carta.valor}
+                        onClick={() => {escolheCarta(carta)}}
+                      />
+                    ))}
+                  </div>
+                  
+                  <div className={`${styles.slotRecuperaAjuda} ${mostraRecuperaAjuda ? "" : "oculto"}`}>
+                    <h3>Escolha tipo de ajuda extra</h3>
+                    
+                    <div>
+                      <Botao
+                        secundario
+                        onClick={()=>{chamaRecuperaAjuda("universitarios")}}
+                      >
+                        <IdcardOutlined />
+                        <span className={styles.labelAjuda}>Convidados</span>
+                      </Botao>
+      
+                      <Botao
+                        secundario
+                        onClick={()=>{chamaRecuperaAjuda("chat")}}
+                      >
+                        <MessageOutlined />
+                        <span className={styles.labelAjuda}>Chat</span>
+                      </Botao>
+                    </div>
+                  </div>
+                </div>,
+            }[tipo]
+          }
+        </Modal>
       }
-    </Modal>
+    </>
   )
 }

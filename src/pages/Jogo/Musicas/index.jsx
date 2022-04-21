@@ -38,6 +38,11 @@ export default function Musicas() {
       modPonto *= configJogo?.pontos.musicas.proporcaoPerda;
     }
 
+    const musicasRestantes = _dadosJogo.musicas.filter((mus) => {
+      return (mus && !mus.tocada);
+    });
+
+    _dadosJogo.finalizando = musicasRestantes.length === 0;
     // _dadosJogo.andamento.jogadorAtual = idProximoJogador(jogadorAtual);
 
     setMostraModal(false);

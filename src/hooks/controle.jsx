@@ -174,14 +174,17 @@ export const ControleProvider = ({children}) => {
     }
     else {
       const _configJogo = {...configJogo};
-      dadosRodada.finalizada = false;
-      dadosRodada.numeroRodada += 1;
-      dadosRodada.jogadores.jogador1.nome = "";
-      dadosRodada.jogadores.jogador2.nome = "";
-      _configJogo.rodadaAtual = dadosRodada.numeroRodada;
+      _configJogo.rodadaAtual += 1;
 
-      atualizarDados("rodadas", dadosRodada, dadosRodada.numeroRodada);
-      atualizarDados("config", _configJogo);
+      const refDados = pegarDados(`rodadas/-1`);
+
+      get(refDados).then((recorte) => {
+        const _dados = JSON.parse(JSON.stringify(recorte.val()));
+        _dados.numeroRodada = _configJogo.rodadaAtual;
+        
+        atualizarDados("rodadas", _dados, _dados.numeroRodada);
+        atualizarDados("config", _configJogo);
+      });
     }
   }
 

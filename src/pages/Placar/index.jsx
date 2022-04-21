@@ -15,7 +15,7 @@ export default function Placar() {
       <>
         <h2>Rodada {dadosJogo?.numeroRodada}</h2>
         <div className={styles.corpoPlacar}>
-          <h3>Placar atual</h3>
+          <h3>Placar {dadosJogo?.finalizando ? "final" : "atual"}</h3>
           <p className={vencendo === "jogador1" ? styles.vencendo : undefined}>
             {dadosJogo?.jogadores?.jogador1?.nome}&nbsp;
             <span>[{formataTextoPontos(dadosJogo?.jogadores?.jogador1?.pontos)}]</span>

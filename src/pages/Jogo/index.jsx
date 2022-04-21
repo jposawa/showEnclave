@@ -1,4 +1,5 @@
 import React from "react";
+import {Navigate} from 'react-router-dom';
 import { MessageOutlined, IdcardOutlined, WindowsOutlined } from "@ant-design/icons";
 import { useControle } from "../../hooks/controle.jsx";
 import { Botao, Ajuda } from "../../components";
@@ -11,10 +12,10 @@ export default function Jogo() {
   const { dadosJogo, formataTextoPontos, ajudaAtiva, setAjudaAtiva } = useControle();
   const { jogadorAtual, etapaAtual } = {jogadorAtual: dadosJogo?.andamento?.jogadorAtual, etapaAtual: dadosJogo?.andamento?.etapaAtual};
   const dadosJogadorAtual = dadosJogo?.jogadores[jogadorAtual];
-  
+
   return (
     <div className={styles.jogo}>
-      {!dadosJogo ? <h1>Carregando jogo...</h1> : (
+      {!dadosJogo ? <h1>Carregando jogo...</h1> : dadosJogo.finalizando ? <Navigate replace to="/placar"/> : (
       <>
         <header>
           <div className={styles.blocoJogador1}>
