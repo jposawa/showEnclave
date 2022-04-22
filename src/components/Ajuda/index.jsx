@@ -41,6 +41,7 @@ export default function Ajuda(props) {
 
   const chamaRecuperaAjuda = (nomeAjuda) =>{
     setMostraRecuperaAjuda();
+    fechaAjuda();
     recuperaAjuda(nomeAjuda);
   }
 

@@ -60,7 +60,7 @@
 
 .descartada {
   opacity: 0.3 !important;
-  --corBotao: var(--corPrimaria) !important;
+  --corBotao: var(--corComplementar) !important;
   --corBotao2: var(--corBotao) !important;
 }
 
