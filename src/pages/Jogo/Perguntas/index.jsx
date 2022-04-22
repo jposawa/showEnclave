@@ -34,6 +34,7 @@ export default function Perguntas() {
 
     Object.values(elementoSlotAlternativas.children).forEach((elementoAlternativa) => {
       elementoAlternativa.classList.remove(styles.alternativaCorreta);
+      elementoAlternativa.classList.remove(styles.descartada);
       elementoAlternativa.disabled = false;
     })
   }
