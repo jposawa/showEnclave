@@ -8,7 +8,9 @@ export default function Carregando(props) {
 
   React.useEffect(() => {
     setTempoAtual(tempo);
-    setMostraBotao(false);
+    if(setMostraBotao) {
+      setMostraBotao(false);
+    }
   }, [])
 
   React.useMemo(() => {
@@ -19,7 +21,9 @@ export default function Carregando(props) {
         _tempoAtual -= 1;
 
         setTempoAtual(_tempoAtual);
-        setMostraBotao(_tempoAtual === 0);
+        if(setMostraBotao){
+          setMostraBotao(_tempoAtual === 0);
+        }
       }, 1000);
     }
   },[tempoAtual])

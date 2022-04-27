@@ -52,6 +52,10 @@ export const useMusica = (url) => {
   }, [tocando]);
 
   React.useMemo(() => {
+    if(audioPronto) {
+      setAudioPronto(false);
+    }
+    
     if(carregou && audio?.readyState === 0) {
       audio.load();
     }
@@ -70,7 +74,7 @@ export const useMusica = (url) => {
       return () => {
         audio.addEventListener('ended', () => setTocando(false));
         audio.addEventListener('loadeddata', () => {
-  
+          console.log(audio.readyState);
           if(audio.readyState >= 2){
             setAudioPronto(true);
           }

@@ -12,6 +12,7 @@
 }
 
 .player {
+  height: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,4 +35,8 @@
 
 .slotBotoesModal>button {
   flex: 0 0 30%;
+}
+
+.slotCarregando {
+  position: relative;
 }
