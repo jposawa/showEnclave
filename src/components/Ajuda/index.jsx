@@ -81,11 +81,11 @@ export default function Ajuda(props) {
               "universitarios": 
                 <>
                   <div className={styles.containerHolocron}>
-                    <Holocron tamanho="10vmin"/>
+                    <Holocron tamanho="10vmin" animado/>
                   </div>
                   <br/><br/>
                   <h3>Consultando convidados</h3>
-                  <Botao onClick={()=>{fechaAjuda()}}>Responder</Botao>
+                  <Botao onClick={()=>{fechaAjuda()}} largura="6rem">Responder</Botao>
                 </>,
               "chat": 
                 <div className={styles.ajudaChat}>
