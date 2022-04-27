@@ -199,13 +199,10 @@ export const ControleProvider = ({children}) => {
   const pegaDadosJogo = () => {
     const refDadosJogo = pegarDados(`rodadas/${configJogo?.rodadaAtual}`);
 
-    get(refDadosJogo).then((recorte) => {
+    onValue(refDadosJogo,(recorte) => {
       const _dadosJogo = JSON.parse(JSON.stringify(recorte.val()));
       
       verificaRodada(_dadosJogo);
-    }).catch((error) => {
-      console.error("Erro ao pegar dados");
-      console.log(error);
     });
   }
 
@@ -248,7 +245,7 @@ export const ControleProvider = ({children}) => {
     return dificuldades[dificuldade];
   }
 
-  const verificaRespostaPontos = (resposta, styles) => {
+  const verificaRespostaPontos = (resposta, styles, perdaIntegral) => {
     const _dadosJogo = JSON.parse(JSON.stringify(dadosJogo));
     const { jogadorAtual, faseAtual } = _dadosJogo?.andamento;
     const perguntaAtual = _dadosJogo?.perguntas[jogadorAtual][faseAtual];
@@ -267,7 +264,7 @@ export const ControleProvider = ({children}) => {
       elementoAlternativaEscolhida.classList.add(styles.alternativaErrada);
       elementoAlternativaCorreta.classList.add(styles.alternativaCorreta);
 
-      modPontos *= configJogo?.pontos?.perguntas?.proporcaoPerda;
+      modPontos *= perdaIntegral ? -1 : configJogo?.pontos?.perguntas?.proporcaoPerda;
 
       //DECISÃO: Não permitir negativo
       // pontos = pontos < 0 ? 0 : pontos;

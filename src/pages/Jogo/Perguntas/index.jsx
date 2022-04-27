@@ -130,7 +130,7 @@ export default function Perguntas() {
             className={`${styles.btnConfirma} ${resposta && !mostraProximo ? undefined : "oculto"}`}
             largura="7rem"
             secundaria
-            onClick={() => {verificaRespostaPontos(resposta, styles)}}
+            onClick={() => {verificaRespostaPontos(resposta, styles, perguntaAtual?.dificuldade === "final")}}
           >
             CONFIRMAR
           </Botao>
@@ -147,10 +147,10 @@ export default function Perguntas() {
       
       <Modal proibidoFechar>
         <h2>Atenção!</h2>
-        <p>A próxima é sua <b>pergunta final</b>, no valor de {configJogo?.pontos?.perguntas?.final} pontos!</p>
+        <p>A próxima é sua <b>Pergunta do Bião</b>, no valor de {configJogo?.pontos?.perguntas?.final} pontos!</p>
+        <p>Diferente das anteriores, você perde o valor integral caso erre</p>
         <br/>
         <p>Você deseja tentar responder?</p>
-        <br/>
         <div className={styles.slotBotoesModal}>
           <Botao complementar onClick={() => {escolhaPerguntaFinal()}}>Não</Botao>
           <Botao onClick={() => {escolhaPerguntaFinal(true)}}>Sim</Botao>

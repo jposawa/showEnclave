@@ -42,7 +42,7 @@
 .circLoading {
   border-radius: 50%;
 
-  animation: girar 2.5s ease-in-out alternate infinite;
+  animation: girar 3s ease-in-out alternate infinite;
 }
 
 @keyframes girar {
