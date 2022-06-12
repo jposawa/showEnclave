@@ -9,6 +9,7 @@
 
 .perguntas>header {
   text-align: center;
+  font-size: 3rem;
 }
 
 .corpoPergunta {
@@ -26,7 +27,8 @@
   width: 100%;
   height: calc(100% - var(--alturaEnunciados));
   padding: 2% 5%;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
+  text-align: center;
 }
 
 .slotAlternativas {
@@ -44,6 +46,7 @@
 
 /*   --largura: 12rem; */
   --altura: 3.5rem;
+  font-size: 2rem;
   clip-path: polygon(15% 0, 0 25%, 0 100%, 85% 100%, 100% 75%, 100% 0);
 }
 

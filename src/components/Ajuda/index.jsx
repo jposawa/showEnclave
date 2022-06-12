@@ -18,6 +18,7 @@ export default function Ajuda(props) {
   const [mostraBotao, setMostraBotao] = React.useState(false);
   const [cartasAjuda, setCartasAjuda] = React.useState();
   const [mostraRecuperaAjuda, setMostraRecuperaAjuda] = React.useState(false);
+  const tempoAjudaChat = 60; //Tempo em segundos
 
   React.useMemo(()=>{
     if(ajudaAtiva === "cartas") {
@@ -90,7 +91,7 @@ export default function Ajuda(props) {
               "chat": 
                 <div className={styles.ajudaChat}>
                   <div className={styles.slotCarregando}>
-                    <Carregando tempo={15} setMostraBotao={setMostraBotao}/>
+                    <Carregando tempo={tempoAjudaChat} setMostraBotao={setMostraBotao}/>
                   </div>
                   
                   {mostraBotao ? <Botao onClick={()=>{fechaAjuda()}}>Responder</Botao> : <p>Aguardando chat</p>}
