@@ -14,8 +14,9 @@ export default function Perguntas() {
     mostraProximo,
     setMostraProximo,
     proximaFase,
-    setMostraModal,
     proximaEtapa,
+    setMostraModal,
+    proximoJogador,
     alternativasDescartadas,
   } = useControle();
   const { jogadorAtual, faseAtual } = dadosJogo?.andamento;
@@ -56,7 +57,14 @@ export default function Perguntas() {
       chamaProxima(true);
     }
     else {
-      proximaEtapa();
+      const { jogadorAtual, sequencia } = dadosJogo.andamento;
+
+      if(jogadorAtual === sequencia[0]) {
+        proximoJogador(true);
+      }
+      else {
+        proximaEtapa();
+      }
     }
   }
 

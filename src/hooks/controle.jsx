@@ -304,6 +304,19 @@ export const ControleProvider = ({children}) => {
     setDadosJogo(_dadosJogo);
   }
 
+  const proximoJogador = (resetaFases) => {
+    const _dadosJogo = copiaDadosJogo();
+    const { jogadorAtual, sequencia } = _dadosJogo.andamento;
+
+    _dadosJogo.andamento.jogadorAtual = jogadorAtual === sequencia[0] ? sequencia[1] : sequencia[0];
+
+    if(resetaFases) {
+      _dadosJogo.andamento.faseAtual = 1;
+    }
+
+    setDadosJogo(_dadosJogo);
+  }
+
   const proximaFase = () => {
     const _dadosJogo = copiaDadosJogo();
     const { jogadorAtual, faseAtual, sequencia, etapaAtual } = _dadosJogo?.andamento;
@@ -386,6 +399,7 @@ export const ControleProvider = ({children}) => {
     verificaRespostaPontos,
     mostraProximo,
     setMostraProximo,
+    proximoJogador,
     proximaFase,
     proximaEtapa,
     mostraModal,
