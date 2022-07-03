@@ -58,6 +58,8 @@ export default function Perguntas() {
     }
     else {
       const { jogadorAtual, sequencia } = dadosJogo.andamento;
+      
+      setMostraProximo(false);
 
       if(jogadorAtual === sequencia[0]) {
         proximoJogador(true);
